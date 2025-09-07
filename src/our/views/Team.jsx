@@ -1,65 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import TeamCard from "../components/TeamCard";
 
 const Team = () => {
+  const [activeTeam, setActiveTeam] = useState("All");
+
+  const teamFilters = [
+    "All",
+    "Core Team",
+    "Technical Team", 
+    "Outreach Team",
+    "Design Team",
+    "Content and Documentation Team",
+    "Liasioning Team",
+    "Events and Training Team",
+    "Marketing Team",
+    "Media and Networking Team"
+  ];
+
   return (
-    <div className="space-y-4 pt-32">
-      <div className="flex gap-2 overflow-x-auto px-2">
-        <Button
-          variant="outline"
-          className="text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2 whitespace-nowrap flex-shrink-0"
-        >
-          Core Team
-        </Button>
-        <Button
-          variant="outline"
-          className="text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2 whitespace-nowrap flex-shrink-0"
-        >
-          Technical Team
-        </Button>
-        <Button
-          variant="outline"
-          className="text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2 whitespace-nowrap flex-shrink-0"
-        >
-          Outreach Team
-        </Button>
-        <Button
-          variant="outline"
-          className="text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2 whitespace-nowrap flex-shrink-0"
-        >
-          Design Team
-        </Button>
-        <Button
-          variant="outline"
-          className="text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2 whitespace-nowrap flex-shrink-0"
-        >
-          Content and Documentation Team
-        </Button>
-        <Button
-          variant="outline"
-          className="text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2 whitespace-nowrap flex-shrink-0"
-        >
-          Liasioning Team
-        </Button>
-        <Button
-          variant="outline"
-          className="text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2 whitespace-nowrap flex-shrink-0"
-        >
-          Events and Training Team
-        </Button>
-        <Button
-          variant="outline"
-          className="text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2 whitespace-nowrap flex-shrink-0"
-        >
-          Marketing Team
-        </Button>
-        <Button
-          variant="outline"
-          className="text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2 whitespace-nowrap flex-shrink-0"
-        >
-          Media and Networking Team
-        </Button>
+    <div className="space-y-6 pt-32">
+      {/* Compact filter buttons */}
+      <div className="flex gap-1 overflow-x-auto px-4 pb-2 scrollbar-hide justify-center">
+        {teamFilters.map((team) => (
+          <Button
+            key={team}
+            variant={activeTeam === team ? "default" : "ghost"}
+            size="sm"
+            onClick={() => setActiveTeam(team)}
+            className={`text-xs px-3 py-1.5 whitespace-nowrap flex-shrink-0 transition-all duration-200 border ${
+              activeTeam === team 
+                ? "bg-primary text-primary-foreground border-primary shadow-sm" 
+                : "border-border hover:bg-muted/50 text-muted-foreground hover:border-muted-foreground/50"
+            }`}
+          >
+            {team}
+          </Button>
+        ))}
       </div>
       <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-6 overflow-x-auto md:flex-wrap md:justify-center w-full px-2 sm:px-4 md:px-6 lg:px-8">
         <TeamCard
