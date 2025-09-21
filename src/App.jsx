@@ -1,10 +1,10 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./our/components/navbar/Navbar";
-import Team from "./our/views/Team";
-import Main from "./our/views/Main";
-import Events from "./our/views/Events";
-import About from "./our/views/About";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './our/components/navbar/Navbar';
+import Team from './our/views/Team';
+import Main from './our/views/Main';
+import Events from './our/views/Events';
+import About from './our/views/About';
 
 function App() {
   return (

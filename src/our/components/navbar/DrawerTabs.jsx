@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Drawer,
   DrawerClose,
@@ -9,9 +9,9 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer";
-import { Button } from "@/components/ui/button";
-import { MenuIcon } from "lucide-react";
+} from '@/components/ui/drawer';
+import { Button } from '@/components/ui/button';
+import { MenuIcon } from 'lucide-react';
 
 const DrawerTabs = () => {
   return (
@@ -27,30 +27,36 @@ const DrawerTabs = () => {
         <div className="flex flex-col gap-2 p-4">
           <DrawerClose asChild>
             <Link to="/">
-              <Button variant="ghost" className="justify-start w-full">Home</Button>
+              <Button variant="ghost" className="justify-start w-full">
+                Home
+              </Button>
             </Link>
           </DrawerClose>
           <DrawerClose asChild>
             <Link to="/team">
-              <Button variant="ghost" className="justify-start w-full">Team</Button>
+              <Button variant="ghost" className="justify-start w-full">
+                Team
+              </Button>
             </Link>
           </DrawerClose>
           <DrawerClose asChild>
             <Link to="/events">
-              <Button variant="ghost" className="justify-start w-full">Events</Button>
+              <Button variant="ghost" className="justify-start w-full">
+                Events
+              </Button>
             </Link>
           </DrawerClose>
           <DrawerClose asChild>
             <Link to="/about">
-              <Button variant="ghost" className="justify-start w-full">About</Button>
+              <Button variant="ghost" className="justify-start w-full">
+                About
+              </Button>
             </Link>
           </DrawerClose>
-          
+
           {/* Connect Button for Mobile */}
           <div className="pt-3 mt-2 border-t border-border">
-            <Button className="w-full">
-              Connect
-            </Button>
+            <Button className="w-full">Connect</Button>
           </div>
         </div>
         <DrawerFooter>

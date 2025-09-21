@@ -1,6 +1,6 @@
-"use client";
-import { cn } from "@/lib/utils";
-import React, { useRef, useState, useEffect } from "react";
+'use client';
+import { cn } from '@/lib/utils';
+import React, { useRef, useState, useEffect } from 'react';
 import {
   motion,
   useMotionValue,
@@ -9,7 +9,7 @@ import {
   animate,
   useVelocity,
   useAnimationControls,
-} from "motion/react";
+} from 'motion/react';
 
 export const DraggableCardBody = ({
   className,
@@ -41,27 +41,27 @@ export const DraggableCardBody = ({
 
   const rotateX = useSpring(
     useTransform(mouseY, [-300, 300], [25, -25]),
-    springConfig,
+    springConfig
   );
   const rotateY = useSpring(
     useTransform(mouseX, [-300, 300], [-25, 25]),
-    springConfig,
+    springConfig
   );
 
   const opacity = useSpring(
     useTransform(mouseX, [-300, 0, 300], [0.8, 1, 0.8]),
-    springConfig,
+    springConfig
   );
 
   const glareOpacity = useSpring(
     useTransform(mouseX, [-300, 0, 300], [0.2, 0, 0.2]),
-    springConfig,
+    springConfig
   );
 
   useEffect(() => {
     // Update constraints when component mounts or window resizes
     const updateConstraints = () => {
-      if (typeof window !== "undefined") {
+      if (typeof window !== 'undefined') {
         setConstraints({
           top: -window.innerHeight / 2,
           left: -window.innerWidth / 2,
@@ -74,11 +74,11 @@ export const DraggableCardBody = ({
     updateConstraints();
 
     // Add resize listener
-    window.addEventListener("resize", updateConstraints);
+    window.addEventListener('resize', updateConstraints);
 
     // Clean up
     return () => {
-      window.removeEventListener("resize", updateConstraints);
+      window.removeEventListener('resize', updateConstraints);
     };
   }, []);
 
@@ -110,16 +110,16 @@ export const DraggableCardBody = ({
       drag
       dragConstraints={constraints}
       onDragStart={() => {
-        document.body.style.cursor = "grabbing";
+        document.body.style.cursor = 'grabbing';
       }}
       onDragEnd={(event, info) => {
-        document.body.style.cursor = "default";
+        document.body.style.cursor = 'default';
 
         controls.start({
           rotateX: 0,
           rotateY: 0,
           transition: {
-            type: "spring",
+            type: 'spring',
             ...springConfig,
           },
         });
@@ -128,7 +128,7 @@ export const DraggableCardBody = ({
 
         const velocityMagnitude = Math.sqrt(
           currentVelocityX * currentVelocityX +
-            currentVelocityY * currentVelocityY,
+            currentVelocityY * currentVelocityY
         );
         const bounce = Math.min(0.8, velocityMagnitude / 1000);
 
@@ -136,7 +136,7 @@ export const DraggableCardBody = ({
           duration: 0.8,
           ease: [0.2, 0, 0, 1],
           bounce,
-          type: "spring",
+          type: 'spring',
           stiffness: 50,
           damping: 15,
           mass: 0.8,
@@ -146,7 +146,7 @@ export const DraggableCardBody = ({
           duration: 0.8,
           ease: [0.2, 0, 0, 1],
           bounce,
-          type: "spring",
+          type: 'spring',
           stiffness: 50,
           damping: 15,
           mass: 0.8,
@@ -156,15 +156,15 @@ export const DraggableCardBody = ({
         rotateX,
         rotateY,
         opacity,
-        willChange: "transform",
+        willChange: 'transform',
       }}
       animate={controls}
       whileHover={{ scale: 1.02 }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "relative min-h-96 w-80 overflow-hidden rounded-md bg-neutral-100 p-6 shadow-2xl transform-3d dark:bg-neutral-900",
-        className,
+        'relative min-h-96 w-80 overflow-hidden rounded-md bg-neutral-100 p-6 shadow-2xl transform-3d dark:bg-neutral-900',
+        className
       )}
     >
       {children}
@@ -186,6 +186,6 @@ export const DraggableCardContainer = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div className={cn("[perspective:3000px]", className)}>{children}</div>
+    <div className={cn('[perspective:3000px]', className)}>{children}</div>
   );
 };

@@ -1,7 +1,7 @@
-import React from "react";
-import { FlipWords } from "@/components/ui/flip-words";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import Footer from "../components/Footer";
+import React from 'react';
+import { FlipWords } from '@/components/ui/flip-words';
+import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
+import Footer from '../components/Footer';
 import {
   FaCode,
   FaPalette,
@@ -16,9 +16,9 @@ import {
   FaHandshake,
   FaGlobe,
   FaChevronDown,
-} from "react-icons/fa";
-import { HiSparkles, HiLightBulb } from "react-icons/hi";
-import { MdDesignServices, MdEvent, MdCampaign } from "react-icons/md";
+} from 'react-icons/fa';
+import { HiSparkles, HiLightBulb } from 'react-icons/hi';
+import { MdDesignServices, MdEvent, MdCampaign } from 'react-icons/md';
 
 const Main = () => {
   const scrollToTeams = () => {
@@ -28,7 +28,7 @@ const Main = () => {
       const elementPosition = teamsSection.offsetTop - offset;
       window.scrollTo({
         top: elementPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   };
@@ -42,11 +42,11 @@ const Main = () => {
               <p className="text-neutral-600 dark:text-neutral-400">Build</p>
               <FlipWords
                 words={[
-                  "Startrups",
-                  "Leaders",
-                  "Communities",
-                  "Networks",
-                  "Inovations",
+                  'Startrups',
+                  'Leaders',
+                  'Communities',
+                  'Networks',
+                  'Inovations',
                 ]}
                 duration={3000}
                 className="text-[#05B1DE] dark:text-[#05B1DE]"
@@ -57,7 +57,7 @@ const Main = () => {
             </p>
           </div>
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-            <button 
+            <button
               onClick={scrollToTeams}
               className="group flex flex-col items-center gap-2 p-3 rounded-full bg-[#05B1DE]/10 hover:bg-[#05B1DE]/20 backdrop-blur-sm border border-[#05B1DE]/20 hover:border-[#05B1DE]/40 transition-all duration-300 hover:scale-110"
               aria-label="Scroll to teams section"

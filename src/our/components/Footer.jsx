@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { 
-  FaGithub, 
-  FaLinkedin, 
-  FaTwitter, 
-  FaInstagram, 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
   FaEnvelope,
   FaMapMarkerAlt,
   FaPhone,
@@ -14,50 +14,56 @@ import {
   FaCalendarAlt,
   FaBullhorn,
   FaFileAlt,
-  FaNetworkWired
-} from "react-icons/fa";
+  FaNetworkWired,
+} from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer id="footer" className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white">
+    <footer
+      id="footer"
+      className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white"
+    >
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-[#05B1DE] mb-2">EDC JSS</h3>
+              <h3 className="text-2xl font-bold text-[#05B1DE] mb-2">
+                EDC JSS
+              </h3>
               <p className="text-neutral-400 text-sm leading-relaxed">
-                Building startups, leaders, communities, and innovations at JSS University. 
-                Shaping the future of entrepreneurship and technology.
+                Building startups, leaders, communities, and innovations at JSS
+                University. Shaping the future of entrepreneurship and
+                technology.
               </p>
             </div>
-            
+
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="social-link w-10 h-10 bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="GitHub"
               >
                 <FaGithub className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="social-link w-10 h-10 bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="social-link w-10 h-10 bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Twitter"
               >
                 <FaTwitter className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="social-link w-10 h-10 bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Instagram"
               >
@@ -68,43 +74,45 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white mb-6">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               <li>
-                <Link 
-                  to="/" 
+                <Link
+                  to="/"
                   className="text-neutral-400 hover:text-[#05B1DE] transition-colors duration-300 text-sm"
                 >
                   Home
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/team" 
+                <Link
+                  to="/team"
                   className="text-neutral-400 hover:text-[#05B1DE] transition-colors duration-300 text-sm"
                 >
                   Our Team
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/events" 
+                <Link
+                  to="/events"
                   className="text-neutral-400 hover:text-[#05B1DE] transition-colors duration-300 text-sm"
                 >
                   Events
                 </Link>
               </li>
               <li>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="text-neutral-400 hover:text-[#05B1DE] transition-colors duration-300 text-sm"
                 >
                   About Us
                 </a>
               </li>
               <li>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="text-neutral-400 hover:text-[#05B1DE] transition-colors duration-300 text-sm"
                 >
                   Contact
@@ -146,21 +154,24 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Get in Touch</h4>
+            <h4 className="text-lg font-semibold text-white mb-6">
+              Get in Touch
+            </h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="w-5 h-5 text-[#05B1DE] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-neutral-400 text-sm">
-                    JSS Science and Technology University<br />
+                    JSS Science and Technology University
+                    <br />
                     Mysuru, Karnataka, India
                   </p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="w-5 h-5 text-[#05B1DE] flex-shrink-0" />
-                <a 
-                  href="mailto:contact@edcjss.com" 
+                <a
+                  href="mailto:contact@edcjss.com"
                   className="text-neutral-400 hover:text-[#05B1DE] transition-colors duration-300 text-sm"
                 >
                   contact@edcjss.com
@@ -168,8 +179,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <FaPhone className="w-5 h-5 text-[#05B1DE] flex-shrink-0" />
-                <a 
-                  href="tel:+91-1234567890" 
+                <a
+                  href="tel:+91-1234567890"
                   className="text-neutral-400 hover:text-[#05B1DE] transition-colors duration-300 text-sm"
                 >
                   +91 12345 67890
@@ -191,20 +202,20 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex space-x-6">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-neutral-400 hover:text-[#05B1DE] transition-colors duration-300 text-sm"
               >
                 Privacy Policy
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-neutral-400 hover:text-[#05B1DE] transition-colors duration-300 text-sm"
               >
                 Terms of Service
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-neutral-400 hover:text-[#05B1DE] transition-colors duration-300 text-sm"
               >
                 Cookie Policy

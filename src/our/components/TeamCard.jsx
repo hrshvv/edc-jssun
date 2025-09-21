@@ -1,11 +1,16 @@
-import React from "react";
+import React from 'react';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
-import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin, IoShareSocialSharp } from "react-icons/io5";
-import { Button } from "@/components/ui/button";
+} from '@/components/ui/popover';
+import {
+  IoLogoGithub,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+  IoShareSocialSharp,
+} from 'react-icons/io5';
+import { Button } from '@/components/ui/button';
 const TeamCard = ({ name, role, image }) => {
   return (
     <div className="bg-white rounded-3xl overflow-hidden min-w-64 min-h-80 relative group">
@@ -44,13 +49,25 @@ const TeamCard = ({ name, role, image }) => {
                   <div>
                     <p className="font-semibold">Socials</p>
                     <div className="flex flex-wrap gap-1">
-                      <Button variant="outline" size="icon" className="text-[18px]">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="text-[18px]"
+                      >
                         <IoLogoInstagram />
                       </Button>
-                      <Button variant="outline" size="icon" className="text-[18px]">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="text-[18px]"
+                      >
                         <IoLogoLinkedin />
                       </Button>
-                      <Button variant="outline" size="icon" className="text-[18px]">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="text-[18px]"
+                      >
                         <IoLogoGithub />
                       </Button>
                     </div>

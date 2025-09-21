@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ThemeToggle } from "../../../components/theme-toggle";
-import { Button } from "@/components/ui/button";
-import Logo from "./Logo";
-import DrawerTabs from "./DrawerTabs";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ThemeToggle } from '../../../components/theme-toggle';
+import { Button } from '@/components/ui/button';
+import Logo from './Logo';
+import DrawerTabs from './DrawerTabs';
 
 const Navbar = () => {
   return (
@@ -60,15 +60,15 @@ const Navbar = () => {
           </div>
 
           {/* Connect Button - Desktop Only */}
-          <Button 
-            size="sm" 
+          <Button
+            size="sm"
             className="hidden lg:inline-flex"
             onClick={() => {
               const footer = document.getElementById('footer');
               if (footer) {
-                footer.scrollIntoView({ 
+                footer.scrollIntoView({
                   behavior: 'smooth',
-                  block: 'start'
+                  block: 'start',
                 });
                 // Add highlight effect to social links
                 setTimeout(() => {
