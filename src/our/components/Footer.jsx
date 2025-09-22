@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
   FaInstagram,
   FaEnvelope,
   FaMapMarkerAlt,
@@ -16,6 +15,18 @@ import {
   FaFileAlt,
   FaNetworkWired,
 } from 'react-icons/fa';
+
+// Custom X (formerly Twitter) logo component
+const XLogo = ({ className }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 const Footer = () => {
   return (
@@ -42,28 +53,21 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex space-x-4">
               <a
-                href="#"
-                className="social-link w-10 h-10 bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="GitHub"
-              >
-                <FaGithub className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/company/edcjssun/posts/?feedView=all"
                 className="social-link w-10 h-10 bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://x.com/jss_ecell"
                 className="social-link w-10 h-10 bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Twitter"
+                aria-label="X (formerly Twitter)"
               >
-                <FaTwitter className="w-5 h-5" />
+                <XLogo className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/edcjssun/"
                 className="social-link w-10 h-10 bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Instagram"
               >

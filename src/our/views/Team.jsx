@@ -110,7 +110,7 @@ const Team = () => {
       name: 'Sameer Singla',
       role: 'Joint Secretary',
       image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1757346993/Sameer_singla_-min_sxka4g.jpg',
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/ar_4:5,c_fill,g_face/v1758553253/Sameer_singla_-min_tmbxss.jpg',
       department: 'Core Team',
     },
     {
@@ -147,6 +147,20 @@ const Team = () => {
       image:
         'https://res.cloudinary.com/dh8cqlngr/image/upload/ar_4:5,c_fill,g_face/v1758478100/garvit-garg_hzyg7d.jpg',
       department: 'Marketing Team',
+    },
+    {
+      name: 'Garvit Garg',
+      role: 'Design Team Member',
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1758552749/aryan-singh_katof2.jpg',
+      department: 'Design Team',
+    },
+    {
+      name: 'Kartikay Varshney',
+      role: 'Design Team Head',
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1758553718/kartikay-varshney_lyarqq.jpg',
+      department: 'Design Team',
     },
   ];
 

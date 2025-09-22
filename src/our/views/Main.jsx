@@ -16,6 +16,7 @@ import {
   FaHandshake,
   FaGlobe,
   FaChevronDown,
+  FaCrown,
 } from 'react-icons/fa';
 import { HiSparkles, HiLightBulb } from 'react-icons/hi';
 import { MdDesignServices, MdEvent, MdCampaign } from 'react-icons/md';
@@ -83,6 +84,41 @@ const Main = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Core Team Card */}
+            <div className="group relative bg-gradient-to-br from-white to-amber-50 dark:from-neutral-900 dark:to-amber-950/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-amber-500 dark:hover:border-amber-500 overflow-hidden">
+              {/* Animated background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-400 rounded-t-3xl"></div>
+
+              {/* Floating sparkles */}
+              <div className="absolute top-4 right-4 text-amber-500/20 group-hover:text-amber-500/40 transition-all duration-300">
+                <HiSparkles className="w-6 h-6" />
+              </div>
+
+              <div className="relative z-10">
+                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                  <FaCrown className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4 group-hover:text-amber-500 transition-colors duration-300">
+                  Core Team
+                </h3>
+                <p className="text-neutral-600 dark:text-neutral-400 mb-6 leading-relaxed text-sm">
+                  Leading EDC's strategic vision, making key decisions, and
+                  guiding the organization towards excellence in
+                  entrepreneurship and innovation.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-amber-500 font-semibold group-hover:translate-x-2 transition-transform duration-300 cursor-pointer">
+                    <span className="text-sm">Explore Team</span>
+                    <FaArrowRight className="w-4 h-4 ml-2 group-hover:ml-3 transition-all duration-300" />
+                  </div>
+                  <div className="text-amber-500/30 group-hover:text-amber-500 transition-colors duration-300">
+                    <FaCrown className="w-5 h-5" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Technical Team Card */}
             <div className="group relative bg-gradient-to-br from-white to-blue-50 dark:from-neutral-900 dark:to-blue-950/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-[#05B1DE] dark:hover:border-[#05B1DE] overflow-hidden">
               {/* Animated background gradient */}
