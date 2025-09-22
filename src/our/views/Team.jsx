@@ -89,7 +89,7 @@ const Team = () => {
       name: 'Krish Bhardwaj',
       role: 'Events and Training Team Member',
       image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/ar_4:5,c_fill,g_face/v1757105140/Krish_Bhardwaj_jtkfsb.png',
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/ar_4:5,c_fill,g_face/v1758563806/krish-bhardhwaj_xpfhce.jpg',
       department: 'Events and Training Team',
     },
     {
