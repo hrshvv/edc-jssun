@@ -178,7 +178,7 @@ const Team = () => {
       : teamData.filter(member => member.department === activeFilter);
 
   return (
-    <div className="space-y-4 pt-32">
+    <div className="space-y-4 pt-32 bg-white dark:bg-black min-h-screen">
       <div className="flex flex-wrap gap-2 px-2 justify-center">
         <Button
           variant={activeFilter === 'All' ? 'default' : 'outline'}

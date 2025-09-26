@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white"
+      className="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 text-gray-900 dark:text-white"
     >
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -54,21 +54,21 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="https://www.linkedin.com/company/edcjssun/posts/?feedView=all"
-                className="social-link w-10 h-10 bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="social-link w-10 h-10 bg-gray-300 dark:bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-5 h-5" />
               </a>
               <a
                 href="https://x.com/jss_ecell"
-                className="social-link w-10 h-10 bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="social-link w-10 h-10 bg-gray-300 dark:bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="X (formerly Twitter)"
               >
                 <XLogo className="w-5 h-5" />
               </a>
               <a
                 href="https://www.instagram.com/edcjssun/"
-                className="social-link w-10 h-10 bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="social-link w-10 h-10 bg-gray-300 dark:bg-neutral-700 hover:bg-[#05B1DE] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Instagram"
               >
                 <FaInstagram className="w-5 h-5" />

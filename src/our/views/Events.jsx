@@ -52,7 +52,7 @@ const Events = () => {
   ];
 
   return (
-    <div className="mt-24">
+    <div className="mt-24 bg-white dark:bg-black min-h-screen">
       <div>
         <br />
         <br />
@@ -65,7 +65,7 @@ const Events = () => {
       </div>
       <div>
         <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
-          <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
+          <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-gray-600 dark:text-neutral-400 md:text-4xl">
             If its your first day at Fight Club, you have to fight.
           </p>
           {items.map(item => (

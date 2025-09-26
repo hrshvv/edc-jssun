@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../../../components/theme-toggle';
+import { useTheme } from '../../../hooks/use-theme.jsx';
 import { Button } from '@/components/ui/button';
 import Logo from './Logo';
 import DrawerTabs from './DrawerTabs';
 
 const Navbar = () => {
+  const { theme } = useTheme();
+
   return (
     <div className="w-full max-w-7xl mx-auto">
       <div className="flex justify-between items-center bg-background/70 backdrop-blur-[4px] py-3 sm:py-4 px-8 border rounded-full">
@@ -62,7 +65,20 @@ const Navbar = () => {
           {/* Connect Button - Desktop Only */}
           <Button
             size="sm"
-            className="hidden lg:inline-flex"
+            className="hidden lg:inline-flex text-white dark:text-black dark:bg-primary dark:hover:bg-primary/90"
+            style={{
+              backgroundColor: theme === 'light' ? '#05B1DE' : undefined,
+            }}
+            onMouseEnter={e => {
+              if (theme === 'light') {
+                e.target.style.backgroundColor = '#04a0c7';
+              }
+            }}
+            onMouseLeave={e => {
+              if (theme === 'light') {
+                e.target.style.backgroundColor = '#05B1DE';
+              }
+            }}
             onClick={() => {
               const footer = document.getElementById('footer');
               if (footer) {

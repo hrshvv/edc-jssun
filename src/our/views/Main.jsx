@@ -45,11 +45,12 @@ const Main = () => {
   return (
     <div>
       {/* Spotlight Section */}
-      <div className="relative flex min-h-[100vh] w-full overflow-hidden rounded-md bg-black antialiased items-center justify-center px-2 sm:px-4">
+      <div className="relative flex min-h-[100vh] w-full overflow-hidden rounded-md bg-white dark:bg-black antialiased items-center justify-center px-2 sm:px-4">
         <div
           className={cn(
             'pointer-events-none absolute inset-0 [background-size:20px_20px] sm:[background-size:30px_30px] md:[background-size:40px_40px] select-none',
-            '[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]'
+            'dark:[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]',
+            '[background-image:linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)]'
           )}
         />
 
@@ -60,7 +61,7 @@ const Main = () => {
         <div className="relative z-10 mx-auto w-full max-w-7xl px-2 sm:px-4 py-6 sm:py-8 md:py-12 lg:py-16">
           <div className="text-center">
             <div className="flex flex-row items-center justify-center gap-1 sm:gap-2 mb-4 sm:mb-6">
-              <p className="text-neutral-600 dark:text-neutral-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
+              <p className="text-gray-800 dark:text-neutral-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
                 Build
               </p>
               <FlipWords
@@ -75,7 +76,7 @@ const Main = () => {
                 className="text-[#05B1DE] dark:text-[#05B1DE] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold"
               />
             </div>
-            <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal px-4 max-w-4xl mx-auto">
+            <p className="text-gray-600 dark:text-neutral-400 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal px-4 max-w-4xl mx-auto">
               Shaping the future of innovation at JSS University through
               creativity, research, and transformative ideas that inspire
               progress.
@@ -409,17 +410,17 @@ const Main = () => {
       </div>
 
       {/* Our Events Section */}
-      <div className="py-12 sm:py-16 md:py-20 bg-black">
+      <div className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-black">
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               Our{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
                 Events
               </span>
             </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
               Join us for exciting workshops, competitions, and networking
               events designed to fuel your entrepreneurial journey
             </p>

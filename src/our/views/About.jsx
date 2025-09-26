@@ -14,18 +14,18 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black pt-20">
+    <div className="min-h-screen bg-white dark:bg-black pt-20">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
+        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-8">
           About{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
             EDC
           </span>
         </h1>
-        <div className="text-2xl md:text-3xl text-gray-300 mb-12">
+        <div className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-12">
           We are <FlipWords words={words} /> <br />
-          <span className="text-lg text-gray-400 mt-4 block">
+          <span className="text-lg text-gray-500 dark:text-gray-400 mt-4 block">
             Empowering the next generation of entrepreneurs
           </span>
         </div>
@@ -37,11 +37,11 @@ const About = () => {
           {/* Mission Card */}
           <CardSpotlight className="h-80 w-full">
             <div className="p-6">
-              <h2 className="text-2xl font-bold text-white mb-4 relative z-20">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 relative z-20">
                 Our Mission
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-2 text-gray-300">
+                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>Foster entrepreneurial spirit among students</span>
@@ -74,11 +74,11 @@ const About = () => {
           {/* Vision Card */}
           <CardSpotlight className="h-80 w-full">
             <div className="p-6">
-              <h2 className="text-2xl font-bold text-white mb-4 relative z-20">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 relative z-20">
                 Our Vision
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-2 text-gray-300">
+                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>Become the premier entrepreneurship hub</span>
@@ -107,11 +107,11 @@ const About = () => {
           {/* Activities Card */}
           <CardSpotlight className="h-80 w-full">
             <div className="p-6">
-              <h2 className="text-2xl font-bold text-white mb-4 relative z-20">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 relative z-20">
                 Key Activities
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-2 text-gray-300">
+                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>Startup incubation programs</span>
@@ -140,11 +140,11 @@ const About = () => {
           {/* Values Card */}
           <CardSpotlight className="h-80 w-full">
             <div className="p-6">
-              <h2 className="text-2xl font-bold text-white mb-4 relative z-20">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 relative z-20">
                 Our Values
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-2 text-gray-300">
+                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
