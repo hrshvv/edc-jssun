@@ -2,6 +2,7 @@ import React from 'react';
 import { FlipWords } from '@/components/ui/flip-words';
 import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
 import Footer from '../components/Footer';
+import TiltedCard from '@/components/TiltedCard';
 import {
   FaCode,
   FaPalette,
@@ -78,27 +79,27 @@ const Main = () => {
       </BackgroundBeamsWithCollision>
 
       {/* What We Do Section */}
-      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-black dark:bg-black">
+      <div className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-black dark:bg-black">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 sm:mb-4">
               What We Do?
             </h2>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto px-4">
               Our comprehensive approach to fostering entrepreneurship and
               innovation through a continuous cycle of growth and development
             </p>
           </div>
 
           {/* Infinity Loop Flowchart */}
-          <div className="relative flex items-center justify-center min-h-[600px] lg:min-h-[700px]">
+          <div className="relative flex items-center justify-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px]">
             {/* Background Circle for Infinity Loop */}
             <div className="absolute inset-0 flex items-center justify-center">
               <svg
                 width="600"
                 height="300"
                 viewBox="0 0 600 300"
-                className="w-full max-w-2xl h-auto"
+                className="w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl h-auto"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -151,92 +152,92 @@ const Main = () => {
             </div>
 
             {/* Stage Cards */}
-            <div className="relative z-10 grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 w-full max-w-5xl">
+            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 w-full max-w-5xl">
               {/* We Explore */}
-              <div className="group flex flex-col items-center text-center space-y-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                  <FaSearch className="w-10 h-10 text-white" />
+              <div className="group flex flex-col items-center text-center space-y-3 sm:space-y-4">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                  <FaSearch className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
-                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-blue-200 dark:border-blue-800 group-hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-lg font-bold text-blue-600 dark:text-blue-400 mb-2">
+                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg border border-blue-200 dark:border-blue-800 group-hover:shadow-xl transition-all duration-300">
+                  <h3 className="text-base sm:text-lg font-bold text-blue-600 dark:text-blue-400 mb-1 sm:mb-2">
                     We Explore
                   </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                     Discovering new opportunities and innovative solutions
                   </p>
                 </div>
               </div>
 
               {/* We Connect */}
-              <div className="group flex flex-col items-center text-center space-y-4 lg:col-start-2">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                  <FaLink className="w-10 h-10 text-white" />
+              <div className="group flex flex-col items-center text-center space-y-3 sm:space-y-4 lg:col-start-2">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                  <FaLink className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
-                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-purple-200 dark:border-purple-800 group-hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-lg font-bold text-purple-600 dark:text-purple-400 mb-2">
+                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg border border-purple-200 dark:border-purple-800 group-hover:shadow-xl transition-all duration-300">
+                  <h3 className="text-base sm:text-lg font-bold text-purple-600 dark:text-purple-400 mb-1 sm:mb-2">
                     We Connect
                   </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                     Building meaningful relationships and networks
                   </p>
                 </div>
               </div>
 
               {/* We Create */}
-              <div className="group flex flex-col items-center text-center space-y-4 lg:col-start-3">
-                <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                  <FaLightbulb className="w-10 h-10 text-white" />
+              <div className="group flex flex-col items-center text-center space-y-3 sm:space-y-4 lg:col-start-3">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                  <FaLightbulb className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
-                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-pink-200 dark:border-pink-800 group-hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-lg font-bold text-pink-600 dark:text-pink-400 mb-2">
+                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg border border-pink-200 dark:border-pink-800 group-hover:shadow-xl transition-all duration-300">
+                  <h3 className="text-base sm:text-lg font-bold text-pink-600 dark:text-pink-400 mb-1 sm:mb-2">
                     We Create
                   </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                     Bringing innovative ideas to life
                   </p>
                 </div>
               </div>
 
               {/* We Strategize */}
-              <div className="group flex flex-col items-center text-center space-y-4 lg:col-start-1 lg:row-start-2">
-                <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                  <FaChess className="w-10 h-10 text-white" />
+              <div className="group flex flex-col items-center text-center space-y-3 sm:space-y-4 lg:col-start-1 lg:row-start-2">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                  <FaChess className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
-                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-amber-200 dark:border-amber-800 group-hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-lg font-bold text-amber-600 dark:text-amber-400 mb-2">
+                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg border border-amber-200 dark:border-amber-800 group-hover:shadow-xl transition-all duration-300">
+                  <h3 className="text-base sm:text-lg font-bold text-amber-600 dark:text-amber-400 mb-1 sm:mb-2">
                     We Strategize
                   </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                     Planning and executing strategic initiatives
                   </p>
                 </div>
               </div>
 
               {/* We Develop */}
-              <div className="group flex flex-col items-center text-center space-y-4 lg:col-start-2 lg:row-start-2">
-                <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                  <FaCogs className="w-10 h-10 text-white" />
+              <div className="group flex flex-col items-center text-center space-y-3 sm:space-y-4 lg:col-start-2 lg:row-start-2">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                  <FaCogs className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
-                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-emerald-200 dark:border-emerald-800 group-hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-lg font-bold text-emerald-600 dark:text-emerald-400 mb-2">
+                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg border border-emerald-200 dark:border-emerald-800 group-hover:shadow-xl transition-all duration-300">
+                  <h3 className="text-base sm:text-lg font-bold text-emerald-600 dark:text-emerald-400 mb-1 sm:mb-2">
                     We Develop
                   </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                     Building and refining our solutions
                   </p>
                 </div>
               </div>
 
               {/* We Launch */}
-              <div className="group flex flex-col items-center text-center space-y-4 lg:col-start-3 lg:row-start-2">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                  <FaRocket className="w-10 h-10 text-white" />
+              <div className="group flex flex-col items-center text-center space-y-3 sm:space-y-4 lg:col-start-3 lg:row-start-2">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                  <FaRocket className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
-                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-cyan-200 dark:border-cyan-800 group-hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-lg font-bold text-cyan-600 dark:text-cyan-400 mb-2">
+                <div className="bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg border border-cyan-200 dark:border-cyan-800 group-hover:shadow-xl transition-all duration-300">
+                  <h3 className="text-base sm:text-lg font-bold text-cyan-600 dark:text-cyan-400 mb-1 sm:mb-2">
                     We Launch
                   </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                     Taking our innovations to the world
                   </p>
                 </div>
@@ -245,12 +246,12 @@ const Main = () => {
           </div>
 
           {/* Additional Description */}
-          <div className="mt-16 text-center">
-            <div className="bg-white/60 dark:bg-neutral-800/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-neutral-200 dark:border-neutral-700 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+          <div className="mt-8 sm:mt-12 lg:mt-16 text-center">
+            <div className="bg-white/60 dark:bg-neutral-800/60 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl border border-neutral-200 dark:border-neutral-700 max-w-4xl mx-auto">
+              <h3 className="text-xl sm:text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 sm:mb-4">
                 Continuous Innovation Cycle
               </h3>
-              <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Our process is designed as an infinite loop where each stage
                 seamlessly flows into the next, creating a continuous cycle of
                 learning, growth, and innovation. This approach ensures that we
@@ -571,6 +572,63 @@ const Main = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="flex gap-10 flex-wrap p-10 justify-center items-center">
+        <TiltedCard
+          imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+          altText="Kendrick Lamar - GNX Album Cover"
+          captionText="Kendrick Lamar - GNX"
+          containerHeight="300px"
+          containerWidth="300px"
+          imageHeight="300px"
+          imageWidth="300px"
+          rotateAmplitude={12}
+          scaleOnHover={1.2}
+          showMobileWarning={false}
+          showTooltip={true}
+          displayOverlayContent={true}
+          overlayContent={
+            <p className="tilted-card-demo-text">Kendrick Lamar - GNX</p>
+          }
+        />
+
+        <TiltedCard
+          imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+          altText="Kendrick Lamar - GNX Album Cover"
+          captionText="Kendrick Lamar - GNX"
+          containerHeight="300px"
+          containerWidth="300px"
+          imageHeight="300px"
+          imageWidth="300px"
+          rotateAmplitude={12}
+          scaleOnHover={1.2}
+          showMobileWarning={false}
+          showTooltip={true}
+          displayOverlayContent={true}
+          overlayContent={
+            <p className="tilted-card-demo-text">Kendrick Lamar - GNX</p>
+          }
+        />
+        <TiltedCard
+          imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+          altText="Kendrick Lamar - GNX Album Cover"
+          captionText="Kendrick Lamar - GNX"
+          containerHeight="300px"
+          containerWidth="300px"
+          imageHeight="300px"
+          imageWidth="300px"
+          rotateAmplitude={12}
+          scaleOnHover={1.2}
+          showMobileWarning={false}
+          showTooltip={true}
+          displayOverlayContent={true}
+          overlayContent={
+            <p className="text-white m-4 text-2xl font-bold">
+              Kendrick Lamar - GNX
+            </p>
+          }
+        />
       </div>
 
       {/* Footer */}
