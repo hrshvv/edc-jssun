@@ -162,6 +162,13 @@ const Team = () => {
         'https://res.cloudinary.com/dh8cqlngr/image/upload/v1758553718/kartikay-varshney_lyarqq.jpg',
       department: 'Design Team',
     },
+    {
+      name: 'Parth Gahlot',
+      role: 'Liaisoning Team Member',
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1758921675/part-gahlot_rgotzo.jpg',
+      department: 'Liaisoning Team',
+    },
   ];
 
   // Filter team members based on active filter
