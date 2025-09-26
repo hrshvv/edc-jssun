@@ -45,7 +45,7 @@ const Main = () => {
   return (
     <div>
       {/* Spotlight Section */}
-      <div className="relative flex min-h-[100vh] w-full overflow-hidden rounded-md bg-black antialiased items-center justify-center">
+      <div className="relative flex min-h-[100vh] w-full overflow-hidden rounded-md bg-black antialiased items-center justify-center px-2 sm:px-4">
         <div
           className={cn(
             'pointer-events-none absolute inset-0 [background-size:20px_20px] sm:[background-size:30px_30px] md:[background-size:40px_40px] select-none',
@@ -54,10 +54,10 @@ const Main = () => {
         />
 
         <Spotlight
-          className="-top-40 left-0 md:-top-20 md:left-60"
+          className="-top-20 left-1/2 -translate-x-1/2 sm:-top-30 sm:left-1/2 sm:-translate-x-1/2 md:-top-20 md:left-1/2 md:-translate-x-1/2"
           fill="#05B1DE"
         />
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-8 sm:py-12 md:py-16">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-2 sm:px-4 py-6 sm:py-8 md:py-12 lg:py-16">
           <div className="text-center">
             <div className="flex flex-row items-center justify-center gap-1 sm:gap-2 mb-4 sm:mb-6">
               <p className="text-neutral-600 dark:text-neutral-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
