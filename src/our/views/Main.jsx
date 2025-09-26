@@ -1,8 +1,10 @@
 import React from 'react';
+import { cn } from '@/lib/utils';
+import { Spotlight } from '@/components/ui/spotlight';
 import { FlipWords } from '@/components/ui/flip-words';
-import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
 import Footer from '../components/Footer';
 import TiltedCard from '@/components/TiltedCard';
+
 import {
   FaCode,
   FaPalette,
@@ -42,11 +44,25 @@ const Main = () => {
 
   return (
     <div>
-      <BackgroundBeamsWithCollision className="h-[100svh] md:h-[100svh] bg-transparent relative">
-        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold w-fit mx-auto h-[100svh] flex flex-col justify-center">
-          <div className="p-4">
-            <div className="flex items-center gap-1 ">
-              <p className="text-neutral-600 dark:text-neutral-400">Build</p>
+      {/* Spotlight Section */}
+      <div className="relative flex min-h-[100vh] w-full overflow-hidden rounded-md bg-black antialiased items-center justify-center">
+        <div
+          className={cn(
+            'pointer-events-none absolute inset-0 [background-size:20px_20px] sm:[background-size:30px_30px] md:[background-size:40px_40px] select-none',
+            '[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]'
+          )}
+        />
+
+        <Spotlight
+          className="-top-40 left-0 md:-top-20 md:left-60"
+          fill="#05B1DE"
+        />
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-8 sm:py-12 md:py-16">
+          <div className="text-center">
+            <div className="flex flex-row items-center justify-center gap-1 sm:gap-2 mb-4 sm:mb-6">
+              <p className="text-neutral-600 dark:text-neutral-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
+                Build
+              </p>
               <FlipWords
                 words={[
                   'Startrups',
@@ -56,43 +72,46 @@ const Main = () => {
                   'Inovations',
                 ]}
                 duration={3000}
-                className="text-[#05B1DE] dark:text-[#05B1DE]"
+                className="text-[#05B1DE] dark:text-[#05B1DE] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold"
               />
             </div>
-            <p className="text-neutral-600 dark:text-neutral-400 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal">
-              Shaping the future of Innovation at JSS University.
+            <p className="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal px-4 max-w-4xl mx-auto">
+              Shaping the future of innovation at JSS University through
+              creativity, research, and transformative ideas that inspire
+              progress.
             </p>
           </div>
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-            <button
-              onClick={scrollToTeams}
-              className="group flex flex-col items-center gap-2 p-3 rounded-full bg-[#05B1DE]/10 hover:bg-[#05B1DE]/20 backdrop-blur-sm border border-[#05B1DE]/20 hover:border-[#05B1DE]/40 transition-all duration-300 hover:scale-110"
-              aria-label="Scroll to teams section"
-            >
-              {/* <span className="text-[#05B1DE] text-sm font-medium group-hover:text-[#05B1DE]/80 transition-colors duration-300">
-                Explore Teams
-              </span> */}
-              <FaChevronDown className="w-4 h-4 text-[#05B1DE] group-hover:translate-y-1 transition-transform duration-300 animate-bounce" />
-            </button>
-          </div>
         </div>
-      </BackgroundBeamsWithCollision>
 
-      <div id="teams-section" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-20">
+          <button
+            onClick={scrollToTeams}
+            className="group flex flex-col items-center gap-1 sm:gap-2 p-2 sm:p-3 rounded-full bg-[#05B1DE]/10 hover:bg-[#05B1DE]/20 backdrop-blur-sm border border-[#05B1DE]/20 hover:border-[#05B1DE]/40 transition-all duration-300 hover:scale-110"
+            aria-label="Scroll to teams section"
+          >
+            <FaChevronDown className="w-3 h-3 sm:w-4 sm:h-4 text-[#05B1DE] group-hover:translate-y-1 transition-transform duration-300 animate-bounce" />
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="teams-section"
+        className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8"
+      >
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 sm:mb-4">
               Our Teams
             </h2>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto px-4">
               Discover the diverse teams that drive innovation and excellence at
               EDC
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {/* Core Team Card */}
-            <div className="group relative bg-gradient-to-br from-white to-amber-50 dark:from-neutral-900 dark:to-amber-950/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-amber-500 dark:hover:border-amber-500 overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-white to-amber-50 dark:from-neutral-900 dark:to-amber-950/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-amber-500 dark:hover:border-amber-500 overflow-hidden">
               {/* Animated background gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-400 rounded-t-3xl"></div>
@@ -127,7 +146,7 @@ const Main = () => {
             </div>
 
             {/* Technical Team Card */}
-            <div className="group relative bg-gradient-to-br from-white to-blue-50 dark:from-neutral-900 dark:to-blue-950/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-[#05B1DE] dark:hover:border-[#05B1DE] overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-white to-blue-50 dark:from-neutral-900 dark:to-blue-950/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-[#05B1DE] dark:hover:border-[#05B1DE] overflow-hidden">
               {/* Animated background gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#05B1DE]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#05B1DE] via-blue-500 to-cyan-400 rounded-t-3xl"></div>
@@ -161,7 +180,7 @@ const Main = () => {
             </div>
 
             {/* Design Team Card */}
-            <div className="group relative bg-gradient-to-br from-white to-purple-50 dark:from-neutral-900 dark:to-purple-950/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-purple-500 dark:hover:border-purple-500 overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-white to-purple-50 dark:from-neutral-900 dark:to-purple-950/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-purple-500 dark:hover:border-purple-500 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 via-pink-500 to-rose-400 rounded-t-3xl"></div>
 
@@ -193,7 +212,7 @@ const Main = () => {
             </div>
 
             {/* Events & Training Team Card */}
-            <div className="group relative bg-gradient-to-br from-white to-orange-50 dark:from-neutral-900 dark:to-orange-950/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-orange-500 dark:hover:border-orange-500 overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-white to-orange-50 dark:from-neutral-900 dark:to-orange-950/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-orange-500 dark:hover:border-orange-500 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400 rounded-t-3xl"></div>
 
@@ -225,7 +244,7 @@ const Main = () => {
             </div>
 
             {/* Marketing Team Card */}
-            <div className="group relative bg-gradient-to-br from-white to-green-50 dark:from-neutral-900 dark:to-green-950/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-green-500 dark:hover:border-green-500 overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-white to-green-50 dark:from-neutral-900 dark:to-green-950/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-green-500 dark:hover:border-green-500 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-400 rounded-t-3xl"></div>
 
@@ -257,7 +276,7 @@ const Main = () => {
             </div>
 
             {/* Content & Documentation Team Card */}
-            <div className="group relative bg-gradient-to-br from-white to-blue-50 dark:from-neutral-900 dark:to-blue-950/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-blue-500 dark:hover:border-blue-500 overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-white to-blue-50 dark:from-neutral-900 dark:to-blue-950/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-blue-500 dark:hover:border-blue-500 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-400 rounded-t-3xl"></div>
 
@@ -289,7 +308,7 @@ const Main = () => {
             </div>
 
             {/* Media & Networking Team Card */}
-            <div className="group relative bg-gradient-to-br from-white to-pink-50 dark:from-neutral-900 dark:to-pink-950/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-pink-500 dark:hover:border-pink-500 overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-white to-pink-50 dark:from-neutral-900 dark:to-pink-950/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-pink-500 dark:hover:border-pink-500 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-500 via-rose-500 to-red-400 rounded-t-3xl"></div>
 
@@ -321,7 +340,7 @@ const Main = () => {
             </div>
 
             {/* Outreach Team Card */}
-            <div className="group relative bg-gradient-to-br from-white to-teal-50 dark:from-neutral-900 dark:to-teal-950/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-teal-500 dark:hover:border-teal-500 overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-white to-teal-50 dark:from-neutral-900 dark:to-teal-950/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-teal-500 dark:hover:border-teal-500 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-400 rounded-t-3xl"></div>
 
@@ -354,7 +373,7 @@ const Main = () => {
             </div>
 
             {/* Liaisoning Team Card */}
-            <div className="group relative bg-gradient-to-br from-white to-indigo-50 dark:from-neutral-900 dark:to-indigo-950/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-indigo-500 dark:hover:border-indigo-500 overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-white to-indigo-50 dark:from-neutral-900 dark:to-indigo-950/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-indigo-500 dark:hover:border-indigo-500 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 rounded-t-3xl"></div>
 
@@ -390,32 +409,32 @@ const Main = () => {
       </div>
 
       {/* Our Events Section */}
-      <div className="py-20 bg-black">
+      <div className="py-12 sm:py-16 md:py-20 bg-black">
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6">
               Our{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Events
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4">
               Join us for exciting workshops, competitions, and networking
               events designed to fuel your entrepreneurial journey
             </p>
           </div>
 
           {/* Events Cards */}
-          <div className="flex gap-10 flex-wrap justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 justify-center items-center">
             <TiltedCard
               imageSrc="https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=500&fit=crop&crop=center"
               altText="Startup Pitch Competition"
               captionText="Startup Pitch Competition"
-              containerHeight="300px"
-              containerWidth="300px"
-              imageHeight="300px"
-              imageWidth="300px"
+              containerHeight="250px"
+              containerWidth="250px"
+              imageHeight="250px"
+              imageWidth="250px"
               rotateAmplitude={12}
               scaleOnHover={1.2}
               showMobileWarning={false}
@@ -427,10 +446,10 @@ const Main = () => {
               imageSrc="https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=500&fit=crop&crop=center"
               altText="Mentorship Workshop"
               captionText="Mentorship Workshop"
-              containerHeight="300px"
-              containerWidth="300px"
-              imageHeight="300px"
-              imageWidth="300px"
+              containerHeight="250px"
+              containerWidth="250px"
+              imageHeight="250px"
+              imageWidth="250px"
               rotateAmplitude={12}
               scaleOnHover={1.2}
               showMobileWarning={false}
@@ -442,10 +461,10 @@ const Main = () => {
               imageSrc="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop&crop=center"
               altText="Networking Event"
               captionText="Networking Event"
-              containerHeight="300px"
-              containerWidth="300px"
-              imageHeight="300px"
-              imageWidth="300px"
+              containerHeight="250px"
+              containerWidth="250px"
+              imageHeight="250px"
+              imageWidth="250px"
               rotateAmplitude={12}
               scaleOnHover={1.2}
               showMobileWarning={false}
@@ -455,8 +474,8 @@ const Main = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-16">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+          <div className="text-center mt-8 sm:mt-12 md:mt-16">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 transform hover:scale-105">
               View All Events
             </button>
           </div>
