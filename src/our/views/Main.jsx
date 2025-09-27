@@ -432,10 +432,10 @@ const Main = () => {
               imageSrc="https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=500&fit=crop&crop=center"
               altText="Startup Pitch Competition"
               captionText="Startup Pitch Competition"
-              containerHeight="250px"
-              containerWidth="250px"
-              imageHeight="250px"
-              imageWidth="250px"
+              containerHeight="350px"
+              containerWidth="350px"
+              imageHeight="350px"
+              imageWidth="350px"
               rotateAmplitude={12}
               scaleOnHover={1.2}
               showMobileWarning={false}
@@ -447,10 +447,10 @@ const Main = () => {
               imageSrc="https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=500&fit=crop&crop=center"
               altText="Mentorship Workshop"
               captionText="Mentorship Workshop"
-              containerHeight="250px"
-              containerWidth="250px"
-              imageHeight="250px"
-              imageWidth="250px"
+              containerHeight="350px"
+              containerWidth="350px"
+              imageHeight="350px"
+              imageWidth="350px"
               rotateAmplitude={12}
               scaleOnHover={1.2}
               showMobileWarning={false}
@@ -462,10 +462,10 @@ const Main = () => {
               imageSrc="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop&crop=center"
               altText="Networking Event"
               captionText="Networking Event"
-              containerHeight="250px"
-              containerWidth="250px"
-              imageHeight="250px"
-              imageWidth="250px"
+              containerHeight="350px"
+              containerWidth="350px"
+              imageHeight="350px"
+              imageWidth="350px"
               rotateAmplitude={12}
               scaleOnHover={1.2}
               showMobileWarning={false}
@@ -476,7 +476,7 @@ const Main = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-8 sm:mt-12 md:mt-16">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 transform hover:scale-105">
+            <button className="text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 transform hover:scale-105 bg-[#05B1DE] hover:bg-[#04a0c7] dark:bg-primary dark:hover:bg-primary/90 dark:text-black">
               View All Events
             </button>
           </div>
