@@ -15,24 +15,38 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black pt-20">
-      {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-8">
-          About{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-            EDC
-          </span>
-        </h1>
-        <div className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-12">
-          We are <FlipWords words={words} /> <br />
-          <span className="text-lg text-gray-500 dark:text-gray-400 mt-4 block">
+      {/* Hero Section with Speaker/Audience Background */}
+      <div className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              'url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&h=1080&fit=crop&crop=center")',
+          }}
+        >
+          <div className="absolute inset-0 bg-black/70"></div>
+        </div>
+
+        {/* Content Overlay */}
+        <div className="absolute top-0 left-0 right-0 z-10 text-center px-4 max-w-4xl mx-auto pt-20">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            About{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              EDC
+            </span>
+          </h1>
+          <div className="text-2xl md:text-3xl text-gray-200 mb-6">
+            We are <FlipWords words={words} />
+          </div>
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Empowering the next generation of entrepreneurs
-          </span>
+          </p>
         </div>
       </div>
 
       {/* Cards Section */}
-      <div className="container mx-auto px-4 sm:px-6 pb-12 md:pb-16">
+      <div className="container mx-auto px-4 sm:px-6 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
           {/* Mission Card */}
           <CardSpotlight className="h-auto min-h-80 w-full">

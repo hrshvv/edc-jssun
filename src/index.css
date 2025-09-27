@@ -171,3 +171,14 @@ body {
 .animate-spotlight {
   animation: spotlight 1s ease-out 0.25s forwards;
 }
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s) linear infinite;
+  animation-direction: var(--animation-direction, forwards);
+}
