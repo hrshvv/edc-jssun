@@ -32,16 +32,16 @@ const About = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="container mx-auto px-4 pb-16">
-        <div className="grid lg:grid-cols-2 gap-6 items-start">
+      <div className="container mx-auto px-4 sm:px-6 pb-12 md:pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
           {/* Mission Card */}
-          <CardSpotlight className="h-80 w-full">
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 relative z-20">
+          <CardSpotlight className="h-auto min-h-80 w-full">
+            <div className="p-4 md:p-6">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 relative z-20">
                 Our Mission
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>Foster entrepreneurial spirit among students</span>
@@ -72,13 +72,13 @@ const About = () => {
           </CardSpotlight>
 
           {/* Vision Card */}
-          <CardSpotlight className="h-80 w-full">
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 relative z-20">
+          <CardSpotlight className="h-auto min-h-80 w-full">
+            <div className="p-4 md:p-6">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 relative z-20">
                 Our Vision
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>Become the premier entrepreneurship hub</span>
@@ -105,13 +105,13 @@ const About = () => {
           </CardSpotlight>
 
           {/* Activities Card */}
-          <CardSpotlight className="h-80 w-full">
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 relative z-20">
+          <CardSpotlight className="h-auto min-h-80 w-full">
+            <div className="p-4 md:p-6">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 relative z-20">
                 Key Activities
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>Startup incubation programs</span>
@@ -138,13 +138,13 @@ const About = () => {
           </CardSpotlight>
 
           {/* Values Card */}
-          <CardSpotlight className="h-80 w-full">
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 relative z-20">
+          <CardSpotlight className="h-auto min-h-80 w-full">
+            <div className="p-4 md:p-6">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 relative z-20">
                 Our Values
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
