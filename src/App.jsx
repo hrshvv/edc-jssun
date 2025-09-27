@@ -9,7 +9,7 @@ import About from './our/views/About';
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="edc-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Router>
         <div className="fixed top-0 left-1/2 -translate-x-1/2 z-50 md:w-[80%] w-full p-4">
           <Navbar />
