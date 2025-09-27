@@ -78,7 +78,10 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">
+            <h4
+              className="text-lg font-semibold mb-6"
+              style={{ color: '#05B1DE' }}
+            >
               Quick Links
             </h4>
             <ul className="space-y-3">
@@ -127,7 +130,12 @@ const Footer = () => {
 
           {/* Teams */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Our Teams</h4>
+            <h4
+              className="text-lg font-semibold mb-6"
+              style={{ color: '#05B1DE' }}
+            >
+              Our Teams
+            </h4>
             <ul className="space-y-3">
               <li className="flex items-center text-neutral-400 hover:text-[#05B1DE] transition-colors duration-300 text-sm">
                 <FaCode className="w-4 h-4 mr-2" />
@@ -158,7 +166,10 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">
+            <h4
+              className="text-lg font-semibold mb-6"
+              style={{ color: '#05B1DE' }}
+            >
               Get in Touch
             </h4>
             <div className="space-y-4">
