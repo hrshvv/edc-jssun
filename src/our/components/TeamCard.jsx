@@ -18,7 +18,7 @@ const TeamCard = ({ name, role, image }) => {
         <img
           src={image}
           alt="Team member"
-          className="w-full h-full object-cover transition-all duration-300 ease-in-out md:group-hover:blur-xs md:group-hover:scale-105"
+          className="w-full h-full object-cover transition-all duration-500 ease-in-out md:group-hover:blur-xs md:group-hover:scale-105"
         />
       </div>
       <div className="absolute z-10 bottom-0 w-full">

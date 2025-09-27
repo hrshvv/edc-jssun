@@ -65,19 +65,15 @@ const Navbar = () => {
           {/* Connect Button - Desktop Only */}
           <Button
             size="sm"
-            className="hidden lg:inline-flex text-white dark:text-black dark:bg-primary dark:hover:bg-primary/90"
+            className="hidden lg:inline-flex text-white"
             style={{
-              backgroundColor: theme === 'light' ? '#05B1DE' : undefined,
+              backgroundColor: '#05B1DE',
             }}
             onMouseEnter={e => {
-              if (theme === 'light') {
-                e.target.style.backgroundColor = '#04a0c7';
-              }
+              e.target.style.backgroundColor = '#04a0c7';
             }}
             onMouseLeave={e => {
-              if (theme === 'light') {
-                e.target.style.backgroundColor = '#05B1DE';
-              }
+              e.target.style.backgroundColor = '#05B1DE';
             }}
             onClick={() => {
               const footer = document.getElementById('footer');
