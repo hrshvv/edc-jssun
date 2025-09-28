@@ -427,14 +427,14 @@ const Main = () => {
           </div>
 
           {/* Events Cards */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 justify-center items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-6 lg:gap-6 justify-center items-center max-w-4xl mx-auto">
             <TiltedCard
-              imageSrc="https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=500&fit=crop&crop=center"
+              imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/Recruitment_20250918_114625_0000_vaz5rz.png"
               altText="Startup Pitch Competition"
               captionText="Startup Pitch Competition"
-              containerHeight="350px"
+              containerHeight="500px"
               containerWidth="350px"
-              imageHeight="350px"
+              imageHeight="500px"
               imageWidth="350px"
               rotateAmplitude={12}
               scaleOnHover={1.2}
@@ -444,12 +444,12 @@ const Main = () => {
             />
 
             <TiltedCard
-              imageSrc="https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=500&fit=crop&crop=center"
+              imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png"
               altText="Mentorship Workshop"
               captionText="Mentorship Workshop"
-              containerHeight="350px"
+              containerHeight="500px"
               containerWidth="350px"
-              imageHeight="350px"
+              imageHeight="500px"
               imageWidth="350px"
               rotateAmplitude={12}
               scaleOnHover={1.2}
@@ -459,12 +459,27 @@ const Main = () => {
             />
 
             <TiltedCard
-              imageSrc="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop&crop=center"
+              imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg"
               altText="Networking Event"
               captionText="Networking Event"
-              containerHeight="350px"
+              containerHeight="500px"
               containerWidth="350px"
-              imageHeight="350px"
+              imageHeight="500px"
+              imageWidth="350px"
+              rotateAmplitude={12}
+              scaleOnHover={1.2}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+            />
+
+            <TiltedCard
+              imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg"
+              altText="Networking Event"
+              captionText="Networking Event"
+              containerHeight="500px"
+              containerWidth="350px"
+              imageHeight="500px"
               imageWidth="350px"
               rotateAmplitude={12}
               scaleOnHover={1.2}

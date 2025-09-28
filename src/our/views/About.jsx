@@ -14,33 +14,33 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black pt-20">
+    <div className="min-h-screen bg-white dark:bg-black">
       {/* Hero Section with Speaker/Audience Background */}
       <div className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              'url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&h=1080&fit=crop&crop=center")',
+              'url("https://res.cloudinary.com/dh8cqlngr/image/upload/v1758992936/WhatsApp_Image_2025-09-27_at_20.01.31_04f0779d_jwq8kg.png")',
+            backgroundSize: '100%',
+            backgroundPosition: 'center center',
           }}
         >
           <div className="absolute inset-0 bg-black/70"></div>
         </div>
 
         {/* Content Overlay */}
-        <div className="absolute top-0 left-0 right-0 z-10 text-center px-4 max-w-4xl mx-auto pt-20">
+        <div className="absolute top-0 left-0 right-0 z-10 text-center px-4 max-w-4xl mx-auto pt-40">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             About{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
               EDC
             </span>
           </h1>
-          <div className="text-2xl md:text-3xl text-gray-200 mb-6">
-            We are <FlipWords words={words} />
-          </div>
+
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Empowering the next generation of entrepreneurs
+            Empowering visionaries to transform ideas into impactful ventures.
           </p>
         </div>
       </div>
