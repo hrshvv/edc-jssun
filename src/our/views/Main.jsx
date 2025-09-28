@@ -430,8 +430,8 @@ const Main = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-6 lg:gap-6 justify-center items-center max-w-4xl mx-auto">
             <TiltedCard
               imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/Recruitment_20250918_114625_0000_vaz5rz.png"
-              altText="Startup Pitch Competition"
-              captionText="Startup Pitch Competition"
+              altText="EDC Recruitment Drive 2025"
+              captionText="EDC Recruitment Drive 2025"
               containerHeight="500px"
               containerWidth="350px"
               imageHeight="500px"
@@ -445,8 +445,8 @@ const Main = () => {
 
             <TiltedCard
               imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png"
-              altText="Mentorship Workshop"
-              captionText="Mentorship Workshop"
+              altText="Group Discussion"
+              captionText="Group Discussion"
               containerHeight="500px"
               containerWidth="350px"
               imageHeight="500px"
@@ -460,8 +460,8 @@ const Main = () => {
 
             <TiltedCard
               imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg"
-              altText="Networking Event"
-              captionText="Networking Event"
+              altText="EDCxEureka"
+              captionText="EDCxEureka"
               containerHeight="500px"
               containerWidth="350px"
               imageHeight="500px"
@@ -475,8 +475,8 @@ const Main = () => {
 
             <TiltedCard
               imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg"
-              altText="Networking Event"
-              captionText="Networking Event"
+              altText="Orientation Program 2025"
+              captionText="Orientation Program 2025"
               containerHeight="500px"
               containerWidth="350px"
               imageHeight="500px"
