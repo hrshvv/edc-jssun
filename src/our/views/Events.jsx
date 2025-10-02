@@ -1,20 +1,120 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import PixelCard from '../../components/PixelCard';
+import { InfiniteMovingCards } from '../../components/ui/infinite-moving-cards';
 
 const Events = () => {
+  // Event gallery images for each event
+  const event1Gallery = [
+    {
+      id: 1,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387732/IMG_5645_nibiiw.jpg',
+    },
+    {
+      id: 2,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387730/IMG_5637_k7kyxu.jpg',
+    },
+    {
+      id: 3,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387729/IMG_4329_ro2uaf.jpg',
+    },
+    {
+      id: 4,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387727/IMG_4289_zezr74.jpg',
+    },
+    {
+      id: 5,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387727/IMG_4300_yxfszd.jpg',
+    },
+    {
+      id: 6,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387725/IMG_4274_wpr56p.jpg',
+    },
+    {
+      id: 7,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387724/IMG_4262_wxxelu.jpg',
+    },
+    {
+      id: 8,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387723/IMG_4256_binzhe.jpg',
+    },
+    {
+      id: 9,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387717/IMG_4202_1_fg0lam.jpg ',
+    },
+    {
+      id: 10,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387718/IMG_4207_xpgzyu.jpg',
+    },
+  ];
+
+  const event2Gallery = [
+    {
+      id: 1,
+      image: '',
+    },
+    {
+      id: 2,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png',
+    },
+    {
+      id: 3,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg',
+    },
+    {
+      id: 4,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg',
+    },
+  ];
+
+  const event3Gallery = [
+    {
+      id: 1,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png',
+    },
+    {
+      id: 2,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg',
+    },
+    {
+      id: 3,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg',
+    },
+    {
+      id: 4,
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png',
+    },
+  ];
+
   // Past events with detailed information
   const pastEvents = [
     {
       id: 1,
-      title: 'Startup Pitch Competition 2023',
+      title: 'EDCxEureka Startup Pitch Competition 2025',
       description:
         'Our annual flagship event where 15 innovative startups pitched their ideas to a panel of industry experts and investors. The competition featured cutting-edge solutions in fintech, healthtech, and sustainable technology.',
       image:
         'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg',
       date: '2023-12-15',
-      location: 'Innovation Hub, Main Campus',
-      attendees: 180,
+      location: 'AB-3 Room-113',
+      attendees: '80+',
       winner: 'EcoTech Solutions',
       category: 'Competition',
       highlights: [
@@ -23,18 +123,17 @@ const Events = () => {
         '$50K in prizes awarded',
         '5 investment deals closed',
       ],
-      gallery: [],
     },
     {
       id: 2,
-      title: 'AI & Machine Learning Workshop Series',
+      title: 'Orientation Programme 2025',
       description:
         'A comprehensive 3-day workshop series covering the fundamentals of AI and ML. Participants worked on real-world projects including image recognition, natural language processing, and predictive analytics.',
       image:
         'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg',
       date: '2023-11-20',
-      location: 'Computer Lab 3',
-      attendees: 45,
+      location: 'Multipurpose Hall',
+      attendees: '150+',
       winner: null,
       category: 'Workshop',
       highlights: [
@@ -43,7 +142,6 @@ const Events = () => {
         'Industry expert mentors',
         'Certificates awarded',
       ],
-      gallery: [],
     },
     {
       id: 3,
@@ -53,8 +151,8 @@ const Events = () => {
       image:
         'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png',
       date: '2023-10-25',
-      location: 'Downtown Business Center',
-      attendees: 95,
+      location: 'Online',
+      attendees: 10,
       winner: null,
       category: 'Networking',
       highlights: [
@@ -62,11 +160,6 @@ const Events = () => {
         '5 keynote speakers',
         '3 panel discussions',
         '20+ business connections made',
-      ],
-      gallery: [
-        'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&crop=center',
-        'https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=300&fit=crop&crop=center',
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop&crop=center',
       ],
     },
   ];
@@ -175,8 +268,8 @@ const Events = () => {
                     <div
                       className="relative group overflow-hidden rounded-2xl shadow-2xl"
                       style={{
-                        width: event.id === 1 ? '450px' : '400px',
-                        height: event.id === 1 ? '550px' : '450px',
+                        width: '400px',
+                        height: '500px',
                       }}
                     >
                       <img
@@ -286,43 +379,29 @@ const Events = () => {
                           </div>
                         </div>
                       )}
-
-                      {/* Photo Gallery */}
-                      <div>
-                        <h4 className="font-semibold text-white mb-3">
-                          Event Photos
-                        </h4>
-                        <div className="grid grid-cols-3 gap-2">
-                          {event.gallery.map((photo, idx) => (
-                            <div
-                              key={idx}
-                              className="relative group cursor-pointer"
-                            >
-                              <img
-                                src={photo}
-                                alt={`${event.title} photo ${idx + 1}`}
-                                className="w-full h-20 object-cover rounded-lg transition-transform duration-200 group-hover:scale-105"
-                              />
-                              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-200 rounded-lg flex items-center justify-center">
-                                <svg
-                                  className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
                     </div>
+                  </div>
+                </div>
+
+                {/* Infinite Moving Cards for this event */}
+                <div className="mt-12 mb-8">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-semibold text-white">
+                      Glimpse of the Event
+                    </h3>
+                  </div>
+                  <div className="h-[20rem] rounded-md flex flex-col antialiased bg-black items-center justify-center relative overflow-hidden">
+                    <InfiniteMovingCards
+                      items={
+                        index === 0
+                          ? event1Gallery
+                          : index === 1
+                            ? event2Gallery
+                            : event3Gallery
+                      }
+                      direction="right"
+                      speed="slow"
+                    />
                   </div>
                 </div>
 
