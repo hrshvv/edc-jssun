@@ -31,31 +31,31 @@ const About = () => {
         </div>
 
         {/* Content Overlay */}
-        <div className="absolute top-0 left-0 right-0 z-10 text-center px-4 max-w-4xl mx-auto pt-40">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="absolute top-0 left-0 right-0 z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20 sm:pt-32 md:pt-40">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
             About{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
               EDC
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed px-2">
             Empowering visionaries to transform ideas into impactful ventures.
           </p>
         </div>
       </div>
 
       {/* Cards Section */}
-      <div className="container mx-auto px-4 sm:px-6 py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-start">
           {/* Mission Card */}
-          <CardSpotlight className="h-auto min-h-80 w-full">
-            <div className="p-4 md:p-6">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 relative z-20">
+          <CardSpotlight className="h-auto min-h-72 sm:min-h-80 w-full">
+            <div className="p-4 sm:p-5 md:p-6">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 relative z-20">
                 Our Mission
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
+                <ul className="space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>Foster entrepreneurial spirit among students</span>
@@ -86,13 +86,13 @@ const About = () => {
           </CardSpotlight>
 
           {/* Vision Card */}
-          <CardSpotlight className="h-auto min-h-80 w-full">
-            <div className="p-4 md:p-6">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 relative z-20">
+          <CardSpotlight className="h-auto min-h-72 sm:min-h-80 w-full">
+            <div className="p-4 sm:p-5 md:p-6">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 relative z-20">
                 Our Vision
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
+                <ul className="space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>Become the premier entrepreneurship hub</span>
@@ -119,13 +119,13 @@ const About = () => {
           </CardSpotlight>
 
           {/* Activities Card */}
-          <CardSpotlight className="h-auto min-h-80 w-full">
-            <div className="p-4 md:p-6">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 relative z-20">
+          <CardSpotlight className="h-auto min-h-72 sm:min-h-80 w-full">
+            <div className="p-4 sm:p-5 md:p-6">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 relative z-20">
                 Key Activities
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
+                <ul className="space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>Startup incubation programs</span>
@@ -152,13 +152,13 @@ const About = () => {
           </CardSpotlight>
 
           {/* Values Card */}
-          <CardSpotlight className="h-auto min-h-80 w-full">
-            <div className="p-4 md:p-6">
-              <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 relative z-20">
+          <CardSpotlight className="h-auto min-h-72 sm:min-h-80 w-full">
+            <div className="p-4 sm:p-5 md:p-6">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 relative z-20">
                 Our Values
               </h2>
               <div className="relative z-20">
-                <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
+                <ul className="space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-700 dark:text-gray-300">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     <span>
