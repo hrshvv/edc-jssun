@@ -31,31 +31,6 @@ const Events = () => {
       image:
         'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387727/IMG_4300_yxfszd.jpg',
     },
-    {
-      id: 6,
-      image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387725/IMG_4274_wpr56p.jpg',
-    },
-    {
-      id: 7,
-      image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387724/IMG_4262_wxxelu.jpg',
-    },
-    {
-      id: 8,
-      image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387723/IMG_4256_binzhe.jpg',
-    },
-    {
-      id: 9,
-      image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387717/IMG_4202_1_fg0lam.jpg ',
-    },
-    {
-      id: 10,
-      image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759387718/IMG_4207_xpgzyu.jpg',
-    },
   ];
 
   const event2Gallery = [
@@ -81,28 +56,7 @@ const Events = () => {
     },
   ];
 
-  const event3Gallery = [
-    {
-      id: 1,
-      image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png',
-    },
-    {
-      id: 2,
-      image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg',
-    },
-    {
-      id: 3,
-      image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg',
-    },
-    {
-      id: 4,
-      image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png',
-    },
-  ];
+  const event3Gallery = [];
 
   // Past events with detailed information
   const pastEvents = [
@@ -113,10 +67,11 @@ const Events = () => {
         'Our annual flagship event where 15 innovative startups pitched their ideas to a panel of industry experts and investors. The competition featured cutting-edge solutions in fintech, healthtech, and sustainable technology.',
       image:
         'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg',
-      date: '2023-12-15',
+      date: '2025-08-20',
       location: 'AB-3 Room-113',
       attendees: '80+',
-      winner: 'EcoTech Solutions',
+      winner:
+        '🥇 EcoTech Solutions<br/>🥈 GreenTech Innovations<br/>🥉 DataFlow Systems',
       category: 'Competition',
       highlights: [
         '15 startups participated',
@@ -132,11 +87,11 @@ const Events = () => {
         'A comprehensive 3-day workshop series covering the fundamentals of AI and ML. Participants worked on real-world projects including image recognition, natural language processing, and predictive analytics.',
       image:
         'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg',
-      date: '2023-11-20',
+      date: '2025-08-05',
       location: 'Multipurpose Hall',
       attendees: '150+',
       winner: null,
-      category: 'Workshop',
+      category: 'Networking',
       highlights: [
         '3-day intensive program',
         'Hands-on projects',
@@ -151,7 +106,7 @@ const Events = () => {
         'An exclusive networking event bringing together entrepreneurs, investors, and industry professionals. The evening featured keynote speakers, panel discussions, and structured networking sessions.',
       image:
         'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png',
-      date: '2023-10-25',
+      date: '2025-09-14',
       location: 'Online',
       attendees: 10,
       winner: null,
@@ -356,21 +311,37 @@ const Events = () => {
                       {/* Winner Badge for Competition */}
                       {event.winner && (
                         <div className="mb-6">
-                          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-lg inline-flex items-center">
-                            <svg
-                              className="w-5 h-5 mr-2"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                              />
-                            </svg>
-                            Winner: {event.winner}
+                          <div className="bg-gray-800 text-white p-6 rounded-2xl shadow-xl border border-gray-700">
+                            <div className="flex items-center mb-4">
+                              <div className="bg-white/20 p-2 rounded-full mr-3">
+                                <svg
+                                  className="w-6 h-6"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                                  />
+                                </svg>
+                              </div>
+                              <h4 className="text-xl font-bold text-white">
+                                Competition Winners
+                              </h4>
+                            </div>
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                              <div className="text-center">
+                                <span
+                                  className="text-lg font-semibold leading-relaxed"
+                                  dangerouslySetInnerHTML={{
+                                    __html: event.winner,
+                                  }}
+                                />
+                              </div>
+                            </div>
                           </div>
                         </div>
                       )}

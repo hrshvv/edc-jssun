@@ -1,14 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ThemeToggle } from '../../../components/theme-toggle';
-import { useTheme } from '../../../hooks/use-theme.jsx';
 import { Button } from '@/components/ui/button';
 import Logo from './Logo';
 import DrawerTabs from './DrawerTabs';
 
 const Navbar = () => {
-  const { theme } = useTheme();
-
   return (
     <div className="w-full max-w-7xl mx-auto">
       <div className="flex justify-between items-center bg-background/70 backdrop-blur-[4px] py-3 sm:py-4 px-8 border rounded-full">
@@ -22,7 +18,7 @@ const Navbar = () => {
           <Link to="/">
             <Button
               variant="ghost"
-              className="text-sm xl:text-base px-3 xl:px-4"
+              className="text-sm xl:text-base px-3 xl:px-4 hover:bg-accent/80 hover:scale-110 hover:border-2 hover:border-accent hover:shadow-xl hover:shadow-accent/25 hover:text-accent-foreground transition-all duration-300"
             >
               Home
             </Button>
@@ -30,7 +26,7 @@ const Navbar = () => {
           <Link to="/team">
             <Button
               variant="ghost"
-              className="text-sm xl:text-base px-3 xl:px-4"
+              className="text-sm xl:text-base px-3 xl:px-4 hover:bg-accent/80 hover:scale-110 hover:border-2 hover:border-accent hover:shadow-xl hover:shadow-accent/25 hover:text-accent-foreground transition-all duration-300"
             >
               Team
             </Button>
@@ -38,7 +34,7 @@ const Navbar = () => {
           <Link to="/events">
             <Button
               variant="ghost"
-              className="text-sm xl:text-base px-3 xl:px-4"
+              className="text-sm xl:text-base px-3 xl:px-4 hover:bg-accent/80 hover:scale-110 hover:border-2 hover:border-accent hover:shadow-xl hover:shadow-accent/25 hover:text-accent-foreground transition-all duration-300"
             >
               Events
             </Button>
@@ -46,17 +42,15 @@ const Navbar = () => {
           <Link to="/about">
             <Button
               variant="ghost"
-              className="text-sm xl:text-base px-3 xl:px-4"
+              className="text-sm xl:text-base px-3 xl:px-4 hover:bg-accent/80 hover:scale-110 hover:border-2 hover:border-accent hover:shadow-xl hover:shadow-accent/25 hover:text-accent-foreground transition-all duration-300"
             >
               About
             </Button>
           </Link>
         </div>
 
-        {/* Right Section - Theme Toggle, Mobile Menu, Connect Button */}
+        {/* Right Section - Mobile Menu, Connect Button */}
         <div className="flex items-center gap-2">
-          <ThemeToggle />
-
           {/* Mobile Drawer */}
           <div className="lg:hidden">
             <DrawerTabs />
