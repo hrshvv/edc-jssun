@@ -61,22 +61,23 @@ const Events = () => {
   const event2Gallery = [
     {
       id: 1,
-      image: '',
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759396434/20250805_145633_etlf36.jpg',
     },
     {
       id: 2,
       image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png',
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759396434/20250805_143104_plm2v0.jpg',
     },
     {
       id: 3,
       image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg',
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759396434/20250805_142633_fkc2dh.jpg',
     },
     {
       id: 4,
       image:
-        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg',
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/v1758992936/WhatsApp_Image_2025-09-27_at_20.01.31_04f0779d_jwq8kg.png',
     },
   ];
 
@@ -145,7 +146,7 @@ const Events = () => {
     },
     {
       id: 3,
-      title: 'Entrepreneur Networking Mixer',
+      title: 'Group Discussion',
       description:
         'An exclusive networking event bringing together entrepreneurs, investors, and industry professionals. The evening featured keynote speakers, panel discussions, and structured networking sessions.',
       image:
@@ -192,32 +193,26 @@ const Events = () => {
         {/* Pixel Cards with Center Image */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-5 mt-12">
           <PixelCard variant="cyan">
-            <div className="absolute top-4 left-4 text-white font-semibold text-sm">
-              <img
-                src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg"
-                alt="Event Center Image"
-                className="w-64 h-80 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
+            <img
+              src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg"
+              alt="Event Center Image"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-70 h-96 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
+            />
           </PixelCard>
 
           <PixelCard variant="cyan">
-            <div className="absolute top-4 left-4 text-white font-semibold text-sm">
-              <img
-                src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg"
-                alt="Event Center Image"
-                className="w-64 h-80 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
+            <img
+              src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg"
+              alt="Event Center Image"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-70 h-96 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
+            />
           </PixelCard>
           <PixelCard variant="cyan">
-            <div className="absolute top-4 left-4 text-white font-semibold text-sm">
-              <img
-                src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png"
-                alt="Event Center Image"
-                className="w-64 h-80 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
+            <img
+              src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png"
+              alt="Event Center Image"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-70 h-96 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
+            />
           </PixelCard>
         </div>
       </div>
@@ -226,7 +221,7 @@ const Events = () => {
       <div className="py-8 flex justify-center">
         <div className="relative group">
           {/* Main gradient line with glow effect */}
-          <div className="w-80 h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="w-300 h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
 
           {/* Center diamond with gradient */}
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
