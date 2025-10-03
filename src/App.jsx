@@ -5,10 +5,12 @@ import Team from './our/views/Team';
 import Main from './our/views/Main';
 import Events from './our/views/Events';
 import About from './our/views/About';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="fixed top-0 left-1/2 -translate-x-1/2 z-50 md:w-[80%] w-full p-4">
         <Navbar />
       </div>
