@@ -378,7 +378,7 @@ const Team = () => {
           Media & Networking
         </Button>
       </div>
-      <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-6 overflow-x-auto md:flex-wrap md:justify-center w-full px-2 sm:px-4 md:px-6 lg:px-8">
+      <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4 lg:gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full px-2 sm:px-4 md:px-6 lg:px-8 justify-items-center">
         {filteredTeam.map((member, index) => (
           <TeamCard
             key={index}

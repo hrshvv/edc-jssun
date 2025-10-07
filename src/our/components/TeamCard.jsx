@@ -13,8 +13,8 @@ import {
 import { Button } from '@/components/ui/button';
 const TeamCard = ({ name, role, image, instagram, linkedin, github }) => {
   return (
-    <div className="bg-white rounded-3xl overflow-hidden min-w-64 min-h-80 relative group">
-      <div className="w-64 h-80 overflow-hidden">
+    <div className="bg-white rounded-3xl overflow-hidden w-full max-w-64 min-h-80 relative group">
+      <div className="w-full h-80 overflow-hidden">
         <img
           src={image}
           alt="Team member"
@@ -22,10 +22,10 @@ const TeamCard = ({ name, role, image, instagram, linkedin, github }) => {
         />
       </div>
       <div className="absolute z-10 bottom-0 w-full">
-        <div className="bg-white text-black py-4 px-4 m-2 rounded-3xl transition-all duration-400 ease-in-out">
+        <div className="bg-white text-black py-2 px-3 m-2 rounded-3xl transition-all duration-400 ease-in-out md:py-4 md:px-4">
           <div className="flex justify-between items-center">
             <div>
-              <p className="font-semibold">{name}</p>
+              <p className="font-semibold text-sm md:text-base">{name}</p>
               <p className="text-xs max-h-10 md:max-h-0 md:overflow-hidden md:group-hover:max-h-10 transition-all duration-400 ease-in-out">
                 {role}
               </p>
