@@ -414,9 +414,9 @@ const Main = () => {
                 imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png"
                 altText="Group Discussion"
                 captionText="Group Discussion"
-                containerHeight="3400x"
+                containerHeight="400px"
                 containerWidth="100%"
-                imageHeight="3400x"
+                imageHeight="400px"
                 imageWidth="100%"
                 rotateAmplitude={8}
                 scaleOnHover={1.1}
