@@ -11,7 +11,7 @@ import {
   IoShareSocialSharp,
 } from 'react-icons/io5';
 import { Button } from '@/components/ui/button';
-const TeamCard = ({ name, role, image }) => {
+const TeamCard = ({ name, role, image, instagram, linkedin, github }) => {
   return (
     <div className="bg-white rounded-3xl overflow-hidden min-w-64 min-h-80 relative group">
       <div className="w-64 h-80 overflow-hidden">
@@ -40,7 +40,7 @@ const TeamCard = ({ name, role, image }) => {
                   <IoShareSocialSharp />
                 </Button>
               </PopoverTrigger>
-              <PopoverContent>
+              <PopoverContent className="bg-black">
                 <div className="space-y-2">
                   <div>
                     <p className="font-semibold">{name}</p>
@@ -49,27 +49,36 @@ const TeamCard = ({ name, role, image }) => {
                   <div>
                     <p className="font-semibold">Socials</p>
                     <div className="flex flex-wrap gap-1">
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        className="text-[18px]"
-                      >
-                        <IoLogoInstagram />
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        className="text-[18px]"
-                      >
-                        <IoLogoLinkedin />
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        className="text-[18px]"
-                      >
-                        <IoLogoGithub />
-                      </Button>
+                      {instagram && (
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="text-[18px]"
+                          onClick={() => window.open(instagram, '_blank')}
+                        >
+                          <IoLogoInstagram />
+                        </Button>
+                      )}
+                      {linkedin && (
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="text-[18px]"
+                          onClick={() => window.open(linkedin, '_blank')}
+                        >
+                          <IoLogoLinkedin />
+                        </Button>
+                      )}
+                      {github && (
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          className="text-[18px]"
+                          onClick={() => window.open(github, '_blank')}
+                        >
+                          <IoLogoGithub />
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </div>

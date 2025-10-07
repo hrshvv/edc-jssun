@@ -111,3 +111,46 @@ body {
   animation: scroll var(--animation-duration, 40s) linear infinite;
   animation-direction: var(--animation-direction, forwards);
 }
+
+/* Mobile viewport height fix */
+.min-h-screen-mobile {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Swipe down button positioning */
+.swipe-down-button {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+}
+
+/* Mobile-specific positioning */
+@media (max-width: 768px) {
+  .swipe-down-button {
+    position: fixed !important;
+    bottom: 1rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 9999 !important;
+  }
+}
+
+/* Desktop positioning */
+@media (min-width: 640px) {
+  .swipe-down-button {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+  }
+}
+
+@media (min-width: 768px) {
+  .swipe-down-button {
+    bottom: 1.5rem;
+  }
+}

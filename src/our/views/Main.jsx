@@ -45,7 +45,7 @@ const Main = () => {
   return (
     <div>
       {/* Spotlight Section */}
-      <div className="relative flex min-h-[100vh] w-full overflow-hidden rounded-md bg-white dark:bg-black antialiased items-center justify-center px-2 sm:px-4">
+      <div className="relative flex min-h-screen-mobile w-full overflow-hidden rounded-md bg-white dark:bg-black antialiased items-center justify-center px-2 sm:px-4">
         <div
           className={cn(
             'pointer-events-none absolute inset-0 [background-size:20px_20px] sm:[background-size:30px_30px] md:[background-size:40px_40px] select-none',
@@ -61,7 +61,7 @@ const Main = () => {
         <div className="relative z-10 mx-auto w-full max-w-7xl px-2 sm:px-4 py-6 sm:py-8 md:py-12 lg:py-16">
           <div className="text-center">
             <div className="flex flex-row items-center justify-center gap-1 sm:gap-2 mb-4 sm:mb-6">
-              <p className="text-gray-800 dark:text-neutral-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
+              <p className="text-gray-800 dark:text-neutral-400 text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">
                 Build
               </p>
               <FlipWords
@@ -73,7 +73,7 @@ const Main = () => {
                   'Inovations',
                 ]}
                 duration={3000}
-                className="text-[#05B1DE] dark:text-[#05B1DE] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold"
+                className="text-[#05B1DE] dark:text-[#05B1DE] text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold"
               />
             </div>
             <p className="text-gray-600 dark:text-neutral-400 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-normal px-4 max-w-4xl mx-auto">
@@ -84,13 +84,13 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-20">
+        <div className="swipe-down-button">
           <button
             onClick={scrollToTeams}
-            className="group flex flex-col items-center gap-1 sm:gap-2 p-2 sm:p-3 rounded-full bg-[#05B1DE]/10 hover:bg-[#05B1DE]/20 backdrop-blur-sm border border-[#05B1DE]/20 hover:border-[#05B1DE]/40 transition-all duration-300 hover:scale-110"
+            className="group flex flex-col items-center gap-1 sm:gap-2 p-3 sm:p-4 rounded-full bg-[#05B1DE]/20 hover:bg-[#05B1DE]/30 backdrop-blur-sm border-2 border-[#05B1DE]/40 hover:border-[#05B1DE]/60 transition-all duration-300 hover:scale-110 shadow-lg"
             aria-label="Scroll to teams section"
           >
-            <FaChevronDown className="w-3 h-3 sm:w-4 sm:h-4 text-[#05B1DE] group-hover:translate-y-1 transition-transform duration-300 animate-bounce" />
+            <FaChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-[#05B1DE] group-hover:translate-y-1 transition-transform duration-300 animate-bounce" />
           </button>
         </div>
       </div>
