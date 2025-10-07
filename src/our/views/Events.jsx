@@ -131,95 +131,97 @@ const Events = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black pt-20">
+    <div className="min-h-screen bg-white dark:bg-black pt-16 sm:pt-20">
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-10 text-center relative">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-8">
-          Our{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-            Events
-          </span>
+      <div className="container mx-auto px-4 py-6 sm:py-8 md:py-10 text-center relative">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 md:mb-8">
+          Our <span className="text-[#05B1DE] dark:text-[#05B1DE]">Events</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
           Join us for exciting workshops, competitions, and networking events
           designed to fuel your entrepreneurial journey
         </p>
 
         {/* Pixel Cards with Center Image */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-5 mt-12">
-          <PixelCard variant="cyan">
-            <img
-              src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg"
-              alt="Event Center Image"
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-70 h-96 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
-            />
-          </PixelCard>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-5 mt-8 sm:mt-10 md:mt-12">
+          <div className="flex justify-center w-full sm:w-auto">
+            <PixelCard variant="cyan" size="lg" imageSize="xl">
+              <img
+                src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg"
+                alt="Event Center Image"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
+              />
+            </PixelCard>
+          </div>
 
-          <PixelCard variant="cyan">
-            <img
-              src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg"
-              alt="Event Center Image"
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-70 h-96 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
-            />
-          </PixelCard>
-          <PixelCard variant="cyan">
-            <img
-              src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png"
-              alt="Event Center Image"
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-70 h-96 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
-            />
-          </PixelCard>
+          <div className="flex justify-center w-full sm:w-auto">
+            <PixelCard variant="cyan" size="lg" imageSize="xl">
+              <img
+                src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg"
+                alt="Event Center Image"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
+              />
+            </PixelCard>
+          </div>
+
+          <div className="flex justify-center w-full sm:w-auto">
+            <PixelCard variant="cyan" size="lg" imageSize="xl">
+              <img
+                src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png"
+                alt="Event Center Image"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
+              />
+            </PixelCard>
+          </div>
         </div>
       </div>
 
       {/* Hero to Past Events Barrier */}
-      <div className="py-8 flex justify-center">
+      <div className="py-6 sm:py-8 flex justify-center">
         <div className="relative group">
           {/* Main gradient line with glow effect */}
-          <div className="w-300 h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="w-64 sm:w-80 md:w-96 lg:w-300 h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
 
           {/* Center diamond with gradient */}
-          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-            <div className="w-2 h-2 bg-white rounded-full"></div>
+          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-5 h-5 sm:w-6 sm:h-6 bg-[#05B1DE] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
           </div>
 
           {/* Decorative dots */}
-          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 -translate-x-8 w-1 h-1 bg-blue-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
-          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 translate-x-8 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
+          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 -translate-x-6 sm:-translate-x-8 w-1 h-1 bg-blue-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
+          <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 translate-x-6 sm:translate-x-8 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
 
           {/* Subtle glow effect */}
-          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-8 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 w-10 sm:w-12 h-6 sm:h-8 bg-[#05B1DE]/20 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
       </div>
 
       {/* Past Events Showcase Section */}
-      <div className="py-16 bg-black">
+      <div className="py-8 sm:py-12 md:py-16 bg-black">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
               Past{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-                Events
-              </span>
+              <span className="text-[#05B1DE] dark:text-[#05B1DE]">Events</span>
             </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
+            <p className="text-gray-300 max-w-2xl mx-auto text-sm sm:text-base px-2">
               Relive the highlights from our most successful events and see the
               impact we've made together
             </p>
           </div>
 
           {/* Past Events Grid */}
-          <div className="space-y-16">
+          <div className="space-y-8 sm:space-y-12 md:space-y-16">
             {pastEvents.map((event, index) => (
               <div key={event.id}>
-                <div className="flex flex-col lg:flex-row gap-8 items-center">
+                <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center">
                   {/* Event Image */}
-                  <div className="flex-1 flex justify-center items-center">
+                  <div className="flex-1 flex justify-center items-center w-full lg:w-auto">
                     <div
-                      className="relative group overflow-hidden rounded-2xl shadow-2xl"
+                      className="relative group overflow-hidden rounded-2xl shadow-2xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-none h-60 sm:h-64 md:h-72 lg:h-80 xl:h-96"
                       style={{
-                        width: '400px',
-                        height: '500px',
+                        width: '100%',
+                        maxWidth: '400px',
                       }}
                     >
                       <img
@@ -243,10 +245,10 @@ const Events = () => {
                   </div>
 
                   {/* Event Details */}
-                  <div className="flex-1">
-                    <div className="max-w-lg">
-                      <div className="flex items-center gap-2 mb-4">
-                        <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold rounded-full">
+                  <div className="flex-1 w-full lg:w-auto">
+                    <div className="max-w-lg mx-auto lg:mx-0">
+                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 mb-4">
+                        <span className="px-3 py-1 bg-[#05B1DE] text-white text-sm font-semibold rounded-full">
                           {event.category}
                         </span>
                         <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -254,43 +256,47 @@ const Events = () => {
                         </span>
                       </div>
 
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4">
                         {event.title}
                       </h3>
 
-                      <p className="text-gray-300 mb-6 leading-relaxed">
+                      <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                         {event.description}
                       </p>
 
                       {/* Event Stats */}
-                      <div className="grid grid-cols-2 gap-4 mb-6">
-                        <div className="bg-gray-800 p-4 rounded-lg shadow-sm">
-                          <div className="text-2xl font-bold text-blue-400">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
+                        <div className="bg-gray-800 p-3 sm:p-4 rounded-lg shadow-sm">
+                          <div className="text-xl sm:text-2xl font-bold text-blue-400">
                             {event.attendees}
                           </div>
-                          <div className="text-sm text-gray-300">Attendees</div>
+                          <div className="text-xs sm:text-sm text-gray-300">
+                            Attendees
+                          </div>
                         </div>
-                        <div className="bg-gray-800 p-4 rounded-lg shadow-sm">
-                          <div className="text-2xl font-bold text-green-400">
+                        <div className="bg-gray-800 p-3 sm:p-4 rounded-lg shadow-sm">
+                          <div className="text-lg sm:text-xl md:text-2xl font-bold text-green-400 truncate">
                             {event.location.split(',')[0]}
                           </div>
-                          <div className="text-sm text-gray-300">Location</div>
+                          <div className="text-xs sm:text-sm text-gray-300">
+                            Location
+                          </div>
                         </div>
                       </div>
 
                       {/* Event Highlights */}
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-white mb-3">
+                      <div className="mb-4 sm:mb-6">
+                        <h4 className="font-semibold text-white mb-2 sm:mb-3 text-sm sm:text-base">
                           Event Highlights
                         </h4>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           {event.highlights.map((highlight, idx) => (
                             <div
                               key={idx}
-                              className="flex items-center text-sm text-gray-300"
+                              className="flex items-center text-xs sm:text-sm text-gray-300"
                             >
                               <svg
-                                className="w-4 h-4 mr-2 text-green-500 flex-shrink-0"
+                                className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-green-500 flex-shrink-0"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -310,12 +316,12 @@ const Events = () => {
 
                       {/* Winner Badge for Competition */}
                       {event.winner && (
-                        <div className="mb-6">
-                          <div className="bg-gray-800 text-white p-6 rounded-2xl shadow-xl border border-gray-700">
-                            <div className="flex items-center mb-4">
+                        <div className="mb-4 sm:mb-6">
+                          <div className="bg-gray-800 text-white p-4 sm:p-6 rounded-2xl shadow-xl border border-gray-700">
+                            <div className="flex items-center mb-3 sm:mb-4">
                               <div className="bg-white/20 p-2 rounded-full mr-3">
                                 <svg
-                                  className="w-6 h-6"
+                                  className="w-5 h-5 sm:w-6 sm:h-6"
                                   fill="none"
                                   stroke="currentColor"
                                   viewBox="0 0 24 24"
@@ -328,14 +334,14 @@ const Events = () => {
                                   />
                                 </svg>
                               </div>
-                              <h4 className="text-xl font-bold text-white">
+                              <h4 className="text-lg sm:text-xl font-bold text-white">
                                 Competition Winners
                               </h4>
                             </div>
-                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/20">
                               <div className="text-center">
                                 <span
-                                  className="text-lg font-semibold leading-relaxed"
+                                  className="text-base sm:text-lg font-semibold leading-relaxed"
                                   dangerouslySetInnerHTML={{
                                     __html: event.winner,
                                   }}
@@ -350,13 +356,13 @@ const Events = () => {
                 </div>
 
                 {/* Infinite Moving Cards for this event */}
-                <div className="mt-12 mb-8">
-                  <div className="text-center mb-6">
-                    <h3 className="text-xl font-semibold text-white">
+                <div className="mt-8 sm:mt-10 md:mt-12 mb-6 sm:mb-8">
+                  <div className="text-center mb-4 sm:mb-6">
+                    <h3 className="text-lg sm:text-xl font-semibold text-white">
                       Glimpse of the Event
                     </h3>
                   </div>
-                  <div className="h-[20rem] rounded-md flex flex-col antialiased bg-black items-center justify-center relative overflow-hidden">
+                  <div className="h-[15rem] sm:h-[18rem] md:h-[20rem] rounded-md flex flex-col antialiased bg-black items-center justify-center relative overflow-hidden">
                     <InfiniteMovingCards
                       items={
                         index === 0
@@ -373,22 +379,22 @@ const Events = () => {
 
                 {/* Event Barrier/Divider */}
                 {index < pastEvents.length - 1 && (
-                  <div className="mt-20 mb-12 flex justify-center">
+                  <div className="mt-12 sm:mt-16 md:mt-20 mb-8 sm:mb-10 md:mb-12 flex justify-center">
                     <div className="relative group">
                       {/* Main gradient line with glow effect */}
-                      <div className="w-300 h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="w-64 sm:w-80 md:w-96 lg:w-300 h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                       {/* Center diamond with gradient */}
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-5 h-5 sm:w-6 sm:h-6 bg-[#05B1DE] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                       </div>
 
                       {/* Decorative dots */}
-                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 -translate-x-8 w-1 h-1 bg-blue-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
-                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 translate-x-8 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
+                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 -translate-x-6 sm:-translate-x-8 w-1 h-1 bg-blue-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
+                      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 translate-x-6 sm:translate-x-8 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300"></div>
 
                       {/* Subtle glow effect */}
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-8 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 w-10 sm:w-12 h-6 sm:h-8 bg-[#05B1DE]/20 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                   </div>
                 )}

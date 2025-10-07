@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './PixelCard.css';
 
 class Pixel {
@@ -134,8 +134,29 @@ const VARIANTS = {
   },
 };
 
+const SIZE_VARIANTS = {
+  xs: { width: '200px', height: '250px' },
+  sm: { width: '250px', height: '300px' },
+  md: { width: '300px', height: '375px' },
+  lg: { width: '350px', height: '450px' },
+  xl: { width: '400px', height: '500px' },
+  '2xl': { width: '450px', height: '550px' },
+};
+
+const IMAGE_SIZE_VARIANTS = {
+  xs: { width: 'w-40', height: 'h-48' },
+  sm: { width: 'w-48', height: 'h-60' },
+  md: { width: 'w-56', height: 'h-72' },
+  lg: { width: 'w-64', height: 'h-80' },
+  xl: { width: 'w-72', height: 'h-96' },
+  '2xl': { width: 'w-80', height: 'h-104' },
+  '3xl': { width: 'w-96', height: 'h-120' },
+};
+
 export default function PixelCard({
   variant = 'default',
+  size = 'lg',
+  imageSize = 'lg',
   gap,
   speed,
   colors,
@@ -153,6 +174,8 @@ export default function PixelCard({
   ).current;
 
   const variantCfg = VARIANTS[variant] || VARIANTS.default;
+  const sizeCfg = SIZE_VARIANTS[size] || SIZE_VARIANTS.lg;
+  const imageSizeCfg = IMAGE_SIZE_VARIANTS[imageSize] || IMAGE_SIZE_VARIANTS.lg;
   const finalGap = gap ?? variantCfg.gap;
   const finalSpeed = speed ?? variantCfg.speed;
   const finalColors = colors ?? variantCfg.colors;
@@ -257,10 +280,34 @@ export default function PixelCard({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finalGap, finalSpeed, finalColors, finalNoFocus]);
 
+  // Helper function to get image classes for children
+  const getImageClasses = child => {
+    if (child && child.type === 'img') {
+      const baseClasses = child.props.className || '';
+      const imageClasses = `${imageSizeCfg.width} ${imageSizeCfg.height}`;
+      return `${baseClasses} ${imageClasses}`.trim();
+    }
+    return child;
+  };
+
+  // Clone children and apply image sizing
+  const processedChildren = React.Children.map(children, child => {
+    if (React.isValidElement(child) && child.type === 'img') {
+      return React.cloneElement(child, {
+        className: getImageClasses(child),
+      });
+    }
+    return child;
+  });
+
   return (
     <div
       ref={containerRef}
-      className={`pixel-card ${className}`}
+      className={`pixel-card pixel-card-${size} ${className}`}
+      style={{
+        width: sizeCfg.width,
+        height: sizeCfg.height,
+      }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onFocus={finalNoFocus ? undefined : onFocus}
@@ -268,7 +315,7 @@ export default function PixelCard({
       tabIndex={finalNoFocus ? -1 : 0}
     >
       <canvas className="pixel-canvas" ref={canvasRef} />
-      {children}
+      {processedChildren}
     </div>
   );
 }

@@ -259,7 +259,7 @@ const Main = () => {
             {/* Content & Documentation Team Card */}
             <div className="group relative bg-gradient-to-br from-white to-blue-50 dark:from-neutral-900 dark:to-blue-950/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border border-neutral-200 dark:border-neutral-800 hover:border-blue-500 dark:hover:border-blue-500 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-400 rounded-t-3xl"></div>
+              <div className="absolute top-0 left-0 w-full h-3 bg-[#05B1DE] rounded-t-3xl"></div>
 
               <div className="absolute top-6 right-6 text-blue-500/20 group-hover:text-blue-500/40 transition-all duration-300">
                 <HiLightBulb className="w-7 h-7" />
@@ -380,9 +380,7 @@ const Main = () => {
           <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 md:mb-6">
               Our{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-                Events
-              </span>
+              <span className="text-[#05B1DE] dark:text-[#05B1DE]">Events</span>
             </h2>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 dark:text-gray-300 max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto px-2 sm:px-4">
               Join us for exciting workshops, competitions, and networking
