@@ -130,11 +130,11 @@ body {
 /* Mobile-specific positioning */
 @media (max-width: 768px) {
   .swipe-down-button {
-    position: fixed !important;
+    position: absolute !important;
     bottom: 1rem !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    z-index: 9999 !important;
+    z-index: 30 !important;
   }
 }
 
