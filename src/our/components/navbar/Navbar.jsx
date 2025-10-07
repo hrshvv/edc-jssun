@@ -51,6 +51,44 @@ const Navbar = () => {
 
         {/* Right Section - Mobile Menu, Connect Button */}
         <div className="flex items-center gap-2">
+          {/* Connect Button - Mobile Only */}
+          <Button
+            size="sm"
+            className="inline-flex lg:hidden text-white"
+            style={{
+              backgroundColor: '#05B1DE',
+            }}
+            onMouseEnter={e => {
+              e.target.style.backgroundColor = '#04a0c7';
+            }}
+            onMouseLeave={e => {
+              e.target.style.backgroundColor = '#05B1DE';
+            }}
+            onClick={() => {
+              const footer = document.getElementById('footer');
+              if (footer) {
+                footer.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                });
+                // Add highlight effect to social links
+                setTimeout(() => {
+                  const socialLinks = document.querySelectorAll('.social-link');
+                  socialLinks.forEach((link, index) => {
+                    setTimeout(() => {
+                      link.classList.add('highlight-social');
+                      setTimeout(() => {
+                        link.classList.remove('highlight-social');
+                      }, 1000);
+                    }, index * 200);
+                  });
+                }, 500);
+              }
+            }}
+          >
+            Connect
+          </Button>
+
           {/* Mobile Drawer */}
           <div className="lg:hidden">
             <DrawerTabs />
