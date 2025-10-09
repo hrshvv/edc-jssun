@@ -119,105 +119,105 @@ const Main = () => {
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#05B1DE] via-blue-400 to-cyan-400 transform -translate-y-1/2 rounded-full hidden lg:block"></div>
 
             {/* Mobile Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-[#05B1DE] via-blue-400 to-cyan-400 rounded-full lg:hidden"></div>
+            <div className="absolute left-6 sm:left-7 md:left-8 top-0 bottom-0 w-0.5 sm:w-1 bg-gradient-to-b from-[#05B1DE] via-blue-400 to-cyan-400 rounded-full lg:hidden"></div>
 
             {/* Timeline Items */}
-            <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-4 md:gap-6 lg:gap-4">
               {/* We Explore */}
-              <div className="relative flex flex-col items-center lg:items-center group">
-                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
-                  <FaSearch className="w-8 h-8 text-white" />
+              <div className="relative flex flex-col items-center group">
+                <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-3 sm:mb-4">
+                  <FaSearch className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-500 transition-colors duration-300">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-purple-500 transition-colors duration-300">
                     We Explore
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
                     Discover opportunities and market insights
                   </p>
                 </div>
                 {/* Connector for mobile */}
-                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-purple-500 to-blue-500 lg:hidden"></div>
+                <div className="absolute top-6 sm:top-7 md:top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-6 sm:h-7 md:h-8 bg-gradient-to-b from-purple-500 to-blue-500 lg:hidden"></div>
               </div>
 
               {/* We Connect */}
-              <div className="relative flex flex-col items-center lg:items-center group">
-                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
-                  <FaNetworkWired className="w-8 h-8 text-white" />
+              <div className="relative flex flex-col items-center group">
+                <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-3 sm:mb-4">
+                  <FaNetworkWired className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors duration-300">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-blue-500 transition-colors duration-300">
                     We Connect
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
                     Build relationships and partnerships
                   </p>
                 </div>
                 {/* Connector for mobile */}
-                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-blue-500 to-green-500 lg:hidden"></div>
+                <div className="absolute top-6 sm:top-7 md:top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-6 sm:h-7 md:h-8 bg-gradient-to-b from-blue-500 to-green-500 lg:hidden"></div>
               </div>
 
               {/* We Create */}
-              <div className="relative flex flex-col items-center lg:items-center group">
-                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
-                  <FaLightbulb className="w-8 h-8 text-white" />
+              <div className="relative flex flex-col items-center group">
+                <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-3 sm:mb-4">
+                  <FaLightbulb className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-green-500 transition-colors duration-300">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-green-500 transition-colors duration-300">
                     We Create
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
                     Generate innovative solutions
                   </p>
                 </div>
                 {/* Connector for mobile */}
-                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-green-500 to-orange-500 lg:hidden"></div>
+                <div className="absolute top-6 sm:top-7 md:top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-6 sm:h-7 md:h-8 bg-gradient-to-b from-green-500 to-orange-500 lg:hidden"></div>
               </div>
 
               {/* We Strategize */}
-              <div className="relative flex flex-col items-center lg:items-center group">
-                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
-                  <FaChess className="w-8 h-8 text-white" />
+              <div className="relative flex flex-col items-center group">
+                <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-3 sm:mb-4">
+                  <FaChess className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-orange-500 transition-colors duration-300">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-orange-500 transition-colors duration-300">
                     We Strategize
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
                     Plan and optimize our approach
                   </p>
                 </div>
                 {/* Connector for mobile */}
-                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-orange-500 to-red-500 lg:hidden"></div>
+                <div className="absolute top-6 sm:top-7 md:top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-6 sm:h-7 md:h-8 bg-gradient-to-b from-orange-500 to-red-500 lg:hidden"></div>
               </div>
 
               {/* We Develop */}
-              <div className="relative flex flex-col items-center lg:items-center group">
-                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
-                  <FaCogs className="w-8 h-8 text-white" />
+              <div className="relative flex flex-col items-center group">
+                <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-3 sm:mb-4">
+                  <FaCogs className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-red-500 transition-colors duration-300">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-red-500 transition-colors duration-300">
                     We Develop
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
                     Build and refine our products
                   </p>
                 </div>
                 {/* Connector for mobile */}
-                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-red-500 to-cyan-500 lg:hidden"></div>
+                <div className="absolute top-6 sm:top-7 md:top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-6 sm:h-7 md:h-8 bg-gradient-to-b from-red-500 to-cyan-500 lg:hidden"></div>
               </div>
 
               {/* We Launch */}
-              <div className="relative flex flex-col items-center lg:items-center group">
-                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
-                  <FaRocket className="w-8 h-8 text-white" />
+              <div className="relative flex flex-col items-center group">
+                <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-3 sm:mb-4">
+                  <FaRocket className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-cyan-500 transition-colors duration-300">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-cyan-500 transition-colors duration-300">
                     We Launch
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
                     Bring solutions to the market
                   </p>
                 </div>
@@ -616,9 +616,9 @@ const Main = () => {
           {/* Merchandise Cards */}
 
           {/* Featured Merchandise Card */}
-          <div className="mt-8 sm:mt-12 md:mt-16 max-w-md mx-auto">
+          <div className="mt-8 sm:mt-12 md:mt-16 max-w-6xl mx-auto flex justify-center">
             <AestheticCard
-              imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1760030304/Gemini_Generated_Image_kw3vtpkw3vtpkw3v_hv8vei.png"
+              imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1760031621/Untitled-1_gioqwv.png"
               altText="Featured EDC Merchandise"
               className="w-full"
               onClick={() => console.log('Featured merchandise clicked')}
