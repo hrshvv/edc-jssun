@@ -4,6 +4,7 @@ import { Spotlight } from '@/components/ui/spotlight';
 import { FlipWords } from '@/components/ui/flip-words';
 import Footer from '../components/Footer';
 import TiltedCard from '@/components/TiltedCard';
+import AestheticCard from '@/components/AestheticCard';
 
 import {
   FaCode,
@@ -30,11 +31,11 @@ import { HiSparkles, HiLightBulb } from 'react-icons/hi';
 import { MdDesignServices, MdEvent, MdCampaign } from 'react-icons/md';
 
 const Main = () => {
-  const scrollToTeams = () => {
-    const teamsSection = document.querySelector('#teams-section');
-    if (teamsSection) {
-      const offset = 50; // Scroll 100px above the teams section
-      const elementPosition = teamsSection.offsetTop - offset;
+  const scrollToTimeline = () => {
+    const timelineSection = document.querySelector('#timeline-section');
+    if (timelineSection) {
+      const offset = 50; // Scroll 50px above the timeline section
+      const elementPosition = timelineSection.offsetTop - offset;
       window.scrollTo({
         top: elementPosition,
         behavior: 'smooth',
@@ -86,22 +87,153 @@ const Main = () => {
 
         <div className="swipe-down-button">
           <button
-            onClick={scrollToTeams}
+            onClick={scrollToTimeline}
             className="group flex flex-col items-center gap-1 sm:gap-2 p-3 sm:p-4 rounded-full bg-[#05B1DE]/20 hover:bg-[#05B1DE]/30 backdrop-blur-sm border-2 border-[#05B1DE]/40 hover:border-[#05B1DE]/60 transition-all duration-300 hover:scale-110 shadow-lg"
-            aria-label="Scroll to teams section"
+            aria-label="Scroll to timeline section"
           >
             <FaChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-[#05B1DE] group-hover:translate-y-1 transition-transform duration-300 animate-bounce" />
           </button>
         </div>
       </div>
 
+      {/* Timeline Section */}
+      <div
+        id="timeline-section"
+        className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-black dark:bg-black"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+              What{' '}
+              <span className="text-[#05B1DE] dark:text-[#05B1DE]">We Do?</span>
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              From exploration to launch, discover how we transform ideas into
+              reality
+            </p>
+          </div>
+
+          {/* Timeline */}
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#05B1DE] via-blue-400 to-cyan-400 transform -translate-y-1/2 rounded-full hidden lg:block"></div>
+
+            {/* Mobile Timeline Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-[#05B1DE] via-blue-400 to-cyan-400 rounded-full lg:hidden"></div>
+
+            {/* Timeline Items */}
+            <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-4">
+              {/* We Explore */}
+              <div className="relative flex flex-col items-center lg:items-center group">
+                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
+                  <FaSearch className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-500 transition-colors duration-300">
+                    We Explore
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                    Discover opportunities and market insights
+                  </p>
+                </div>
+                {/* Connector for mobile */}
+                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-purple-500 to-blue-500 lg:hidden"></div>
+              </div>
+
+              {/* We Connect */}
+              <div className="relative flex flex-col items-center lg:items-center group">
+                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
+                  <FaNetworkWired className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors duration-300">
+                    We Connect
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                    Build relationships and partnerships
+                  </p>
+                </div>
+                {/* Connector for mobile */}
+                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-blue-500 to-green-500 lg:hidden"></div>
+              </div>
+
+              {/* We Create */}
+              <div className="relative flex flex-col items-center lg:items-center group">
+                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
+                  <FaLightbulb className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-green-500 transition-colors duration-300">
+                    We Create
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                    Generate innovative solutions
+                  </p>
+                </div>
+                {/* Connector for mobile */}
+                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-green-500 to-orange-500 lg:hidden"></div>
+              </div>
+
+              {/* We Strategize */}
+              <div className="relative flex flex-col items-center lg:items-center group">
+                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
+                  <FaChess className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-orange-500 transition-colors duration-300">
+                    We Strategize
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                    Plan and optimize our approach
+                  </p>
+                </div>
+                {/* Connector for mobile */}
+                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-orange-500 to-red-500 lg:hidden"></div>
+              </div>
+
+              {/* We Develop */}
+              <div className="relative flex flex-col items-center lg:items-center group">
+                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
+                  <FaCogs className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-red-500 transition-colors duration-300">
+                    We Develop
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                    Build and refine our products
+                  </p>
+                </div>
+                {/* Connector for mobile */}
+                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-red-500 to-cyan-500 lg:hidden"></div>
+              </div>
+
+              {/* We Launch */}
+              <div className="relative flex flex-col items-center lg:items-center group">
+                <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300 mb-4">
+                  <FaRocket className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-cyan-500 transition-colors duration-300">
+                    We Launch
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block">
+                    Bring solutions to the market
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div
         id="teams-section"
-        className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8"
+        className="pt-26 sm:pt-32 md:pt-34 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 bg-black dark:bg-black"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 sm:mb-4">
+            <h2 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 sm:mb-4">
               Our{' '}
               <span className="text-[#05B1DE] dark: text-[#05B1DE]">
                 Departments
@@ -459,6 +591,45 @@ const Main = () => {
                 showTooltip={true}
                 displayOverlayContent={true}
               />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Our Merchandise Section */}
+      <div className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-black dark:bg-black">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
+            <h2 className="text-4xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 md:mb-6">
+              Our{' '}
+              <span className="text-[#05B1DE] dark:text-[#05B1DE]">
+                Merchandise
+              </span>
+            </h2>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 dark:text-gray-300 max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto px-2 sm:px-4">
+              Show your EDC pride with our exclusive collection of branded
+              merchandise and accessories
+            </p>
+          </div>
+
+          {/* Merchandise Cards */}
+
+          {/* Featured Merchandise Card */}
+          <div className="mt-8 sm:mt-12 md:mt-16 max-w-md mx-auto">
+            <AestheticCard
+              imageSrc="https://res.cloudinary.com/dh8cqlngr/image/upload/v1760030304/Gemini_Generated_Image_kw3vtpkw3vtpkw3v_hv8vei.png"
+              altText="Featured EDC Merchandise"
+              className="w-full"
+              onClick={() => console.log('Featured merchandise clicked')}
+            />
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-8 sm:mt-12 md:mt-16">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-[#05B1DE] text-white rounded-full hover:bg-[#05B1DE]/90 transition-colors duration-300 cursor-pointer">
+              <span className="text-sm sm:text-base font-medium">Shop Now</span>
+              <FaArrowRight className="w-4 h-4" />
             </div>
           </div>
         </div>
