@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Spotlight } from '@/components/ui/spotlight';
 import { FlipWords } from '@/components/ui/flip-words';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
 import Footer from '../components/Footer';
 import TiltedCard from '@/components/TiltedCard';
 import AestheticCard from '@/components/AestheticCard';
@@ -31,6 +36,8 @@ import { HiSparkles, HiLightBulb } from 'react-icons/hi';
 import { MdDesignServices, MdEvent, MdCampaign } from 'react-icons/md';
 
 const Main = () => {
+  const [isShopPopupOpen, setIsShopPopupOpen] = useState(false);
+
   const scrollToTimeline = () => {
     const timelineSection = document.querySelector('#timeline-section');
     if (timelineSection) {
@@ -627,10 +634,85 @@ const Main = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-8 sm:mt-12 md:mt-16">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-[#05B1DE] text-white rounded-full hover:bg-[#05B1DE]/90 transition-colors duration-300 cursor-pointer">
-              <span className="text-sm sm:text-base font-medium">Shop Now</span>
-              <FaArrowRight className="w-4 h-4" />
-            </div>
+            <Popover open={isShopPopupOpen} onOpenChange={setIsShopPopupOpen}>
+              <PopoverTrigger asChild>
+                <div className="inline-flex items-center gap-2 px-6 py-3 bg-[#05B1DE] text-white rounded-full hover:bg-[#05B1DE]/90 transition-colors duration-300 cursor-pointer">
+                  <span className="text-sm sm:text-base font-medium">
+                    Shop Now
+                  </span>
+                  <FaArrowRight className="w-4 h-4" />
+                </div>
+              </PopoverTrigger>
+              <PopoverContent
+                className="w-80 sm:w-96 p-0 border-0 bg-transparent shadow-none"
+                side="top"
+                align="center"
+              >
+                <div className="relative bg-gradient-to-br from-white to-gray-50 dark:from-neutral-900 dark:to-neutral-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-neutral-700 overflow-hidden">
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#05B1DE]/5 to-transparent"></div>
+
+                  {/* Header */}
+                  <div className="relative p-6 sm:p-8 text-center border-b border-gray-200 dark:border-neutral-700">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-[#05B1DE] to-blue-600 rounded-full flex items-center justify-center">
+                      <FaRocket className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                      Coming Soon!
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                      We're preparing something amazing for you
+                    </p>
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative p-6 sm:p-8">
+                    <div className="text-center mb-6">
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                        EDC Merchandise Store
+                      </h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Get ready to showcase your EDC pride! We're working hard
+                        to bring you exclusive branded merchandise including
+                        t-shirts, hoodies, stickers, and more.
+                      </p>
+                    </div>
+
+                    {/* Features */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
+                        <div className="w-2 h-2 bg-[#05B1DE] rounded-full"></div>
+                        <span>Premium quality materials</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
+                        <div className="w-2 h-2 bg-[#05B1DE] rounded-full"></div>
+                        <span>Exclusive EDC designs</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
+                        <div className="w-2 h-2 bg-[#05B1DE] rounded-full"></div>
+                        <span>Student-friendly pricing</span>
+                      </div>
+                    </div>
+
+                    {/* Notification */}
+                    <div className="bg-[#05B1DE]/10 border border-[#05B1DE]/20 rounded-lg p-4 mb-6">
+                      <div className="flex items-center gap-2 text-[#05B1DE] text-sm font-medium">
+                        <HiSparkles className="w-4 h-4" />
+                        <span>Stay tuned for updates!</span>
+                      </div>
+                    </div>
+
+                    {/* Close Button */}
+                    <button
+                      onClick={() => setIsShopPopupOpen(false)}
+                      className="w-full py-3 px-4 bg-[#05B1DE] text-white rounded-lg hover:bg-[#05B1DE]/90 transition-colors duration-300 font-medium"
+                    >
+                      Got it!
+                    </button>
+                  </div>
+                </div>
+              </PopoverContent>
+            </Popover>
           </div>
         </div>
       </div>
