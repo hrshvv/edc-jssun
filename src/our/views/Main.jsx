@@ -609,7 +609,7 @@ const Main = () => {
             </h2>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 dark:text-gray-300 max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto px-2 sm:px-4">
               Show your EDC pride with our exclusive collection of branded
-              merchandise and accessories
+              merchandise.
             </p>
           </div>
 

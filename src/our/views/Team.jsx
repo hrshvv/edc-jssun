@@ -6,6 +6,28 @@ import Footer from '../components/Footer';
 const Team = () => {
   const [activeFilter, setActiveFilter] = useState('All');
 
+  // Faculty coordinators data
+  const facultyCoordinators = [
+    {
+      name: 'Dr. Nishi Sharma',
+      role: 'Faculty Coordinator',
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/ar_4:5,c_fill,g_face/v1760033447/1747474363758_srqubg.jpg',
+      instagram: '',
+      linkedin: 'https://www.linkedin.com/in/dr-nishi-sharma-8aab36159/',
+      github: '',
+    },
+    {
+      name: 'Dr. Ashima Shrivastava',
+      role: 'Faculty Coordinator',
+      image:
+        'https://res.cloudinary.com/dh8cqlngr/image/upload/ar_4:5,c_fill,g_face/v1760033446/1655353630059_aovzf3.jpg',
+      instagram: '',
+      linkedin: 'https://www.linkedin.com/in/dr-ashima-srivastava-215295135/',
+      github: '',
+    },
+  ];
+
   // Team data with department information
   const teamData = [
     {
@@ -256,6 +278,10 @@ const Team = () => {
       ? teamData
       : teamData.filter(member => member.department === activeFilter);
 
+  // Show faculty coordinators based on filter
+  const showFacultyCoordinators =
+    activeFilter === 'All' || activeFilter === 'Faculty Coordinators';
+
   return (
     <div className="space-y-4 pt-32 bg-white dark:bg-black min-h-screen">
       <div className="flex flex-wrap gap-2 px-2 justify-center">
@@ -269,6 +295,19 @@ const Team = () => {
           onClick={() => setActiveFilter('All')}
         >
           All
+        </Button>
+        <Button
+          variant={
+            activeFilter === 'Faculty Coordinators' ? 'default' : 'outline'
+          }
+          className={`text-xs px-2 py-1.5 h-auto min-h-[32px] flex items-center justify-center whitespace-nowrap transition-all duration-200 ${
+            activeFilter === 'Faculty Coordinators'
+              ? 'bg-[#05B1DE] text-white hover:bg-[#05B1DE]/90'
+              : 'hover:bg-[#05B1DE]/10'
+          }`}
+          onClick={() => setActiveFilter('Faculty Coordinators')}
+        >
+          Faculty Coordinators
         </Button>
         <Button
           variant={activeFilter === 'Core Team' ? 'default' : 'outline'}
@@ -378,19 +417,54 @@ const Team = () => {
           Media & Networking
         </Button>
       </div>
-      <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4 lg:gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full px-2 sm:px-4 md:px-6 lg:px-8 justify-items-center">
-        {filteredTeam.map((member, index) => (
-          <TeamCard
-            key={index}
-            name={member.name}
-            role={member.role}
-            image={member.image}
-            instagram={member.instagram}
-            linkedin={member.linkedin}
-            github={member.github}
-          />
-        ))}
-      </div>
+
+      {/* Faculty Coordinators Section */}
+      {showFacultyCoordinators && (
+        <div className="space-y-4">
+          <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-white px-4">
+            Faculty Coordinators
+          </h2>
+          <div className="flex justify-center">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4 lg:gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 px-2 sm:px-4 md:px-6 lg:px-8 justify-items-center">
+              {facultyCoordinators.map((member, index) => (
+                <TeamCard
+                  key={`faculty-${index}`}
+                  name={member.name}
+                  role={member.role}
+                  image={member.image}
+                  instagram={member.instagram}
+                  linkedin={member.linkedin}
+                  github={member.github}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Team Members Section */}
+      {activeFilter !== 'Faculty Coordinators' && (
+        <div className="space-y-4">
+          {activeFilter === 'All' && (
+            <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-white px-4">
+              Team Members
+            </h2>
+          )}
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4 lg:gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full px-2 sm:px-4 md:px-6 lg:px-8 justify-items-center">
+            {filteredTeam.map((member, index) => (
+              <TeamCard
+                key={`team-${index}`}
+                name={member.name}
+                role={member.role}
+                image={member.image}
+                instagram={member.instagram}
+                linkedin={member.linkedin}
+                github={member.github}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <Footer />

@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className="w-full max-w-7xl mx-auto">
       <div className="flex justify-between items-center bg-background/70 backdrop-blur-[4px] py-3 sm:py-4 px-8 border rounded-full">
         {/* Logo Section */}
-        <div className="flex-shrink-0">
+        <div>
           <Logo />
         </div>
 

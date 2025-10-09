@@ -169,6 +169,18 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer Bottom */}
+      <div className="border-t border-gray-200 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="text-center">
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
+              Designed and developed by{' '}
+              <span className="font-semibold text-[#05B1DE]">Team EDC</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };
