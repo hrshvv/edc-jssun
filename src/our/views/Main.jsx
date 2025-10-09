@@ -102,7 +102,10 @@ const Main = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 sm:mb-4">
-              Our Departments
+              Our{' '}
+              <span className="text-[#05B1DE] dark: text-[#05B1DE]">
+                Departments
+              </span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto px-4">
               Discover the diverse teams that drive innovation and excellence at
@@ -378,7 +381,7 @@ const Main = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 md:mb-6">
+            <h2 className="text-4xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 md:mb-6">
               Our{' '}
               <span className="text-[#05B1DE] dark:text-[#05B1DE]">Events</span>
             </h2>
@@ -457,13 +460,6 @@ const Main = () => {
                 displayOverlayContent={true}
               />
             </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-6 sm:mt-8 md:mt-12 lg:mt-16">
-            <button className="text-white font-bold py-2 sm:py-3 md:py-4 px-4 sm:px-6 md:px-8 lg:px-10 rounded-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl transition-all duration-300 transform hover:scale-105 bg-[#05B1DE] hover:bg-[#04a0c7] dark:bg-primary dark:hover:bg-primary/90 dark:text-black shadow-lg hover:shadow-xl">
-              View All Events
-            </button>
           </div>
         </div>
       </div>

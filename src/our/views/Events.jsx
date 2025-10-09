@@ -56,54 +56,51 @@ const Events = () => {
     },
   ];
 
-  const event3Gallery = [];
-
   // Past events with detailed information
   const pastEvents = [
     {
       id: 1,
-      title: 'EDCxEureka Startup Pitch Competition 2025',
+      title: 'EDCxEureka! Road to Enterprise 2025',
       description:
-        'Our annual flagship event where 15 innovative startups pitched their ideas to a panel of industry experts and investors. The competition featured cutting-edge solutions in fintech, healthtech, and sustainable technology.',
+        'Eureka! Road to Enterprise 2025, organized under the National Entrepreneurship Challenge 2025 by E-Cell IIT Bombay, was successfully conducted at JSS University, Noida. The event served as a dynamic platform for aspiring innovators and entrepreneurs to pitch their ideas, gain mentorship, and take the first step toward building impactful startups. It inspired participants to think big, step up, and make their ideas heard.',
       image:
         'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg',
       date: '2025-08-20',
       location: 'AB-3 Room-113',
       attendees: '80+',
-      winner:
-        '🥇 EcoTech Solutions<br/>🥈 GreenTech Innovations<br/>🥉 DataFlow Systems',
+      winner: '🥇 Team Legoal <br/>🥈 Team Cronoz <br/>🥉 Team Zenminds',
       category: 'Competition',
       highlights: [
-        '15 startups participated',
-        '3 winners selected',
-        '$50K in prizes awarded',
-        '5 investment deals closed',
+        'Students pitched their innovative startup ideas.',
+        'Interactive discussions on entrepreneurship and innovation.',
+        'Collaboration with E-Cell IIT Bombay under NEC 2025.',
+        'Top ideas received recognition and valuable feedback.',
       ],
     },
     {
       id: 2,
       title: 'Orientation Programme 2025',
       description:
-        'A comprehensive 3-day workshop series covering the fundamentals of AI and ML. Participants worked on real-world projects including image recognition, natural language processing, and predictive analytics.',
+        'The EDC Orientation Programme marked the beginning of a new entrepreneurial journey for the students of JSS University, Noida. The session introduced freshers to the vision, initiatives, and opportunities provided by the Entrepreneurship Development Cell (EDC), inspiring them to take their first step into the world of startups and innovation.',
       image:
         'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg',
       date: '2025-08-05',
-      location: 'Multipurpose Hall',
+      location: 'MPH',
       attendees: '150+',
       winner: null,
       category: 'Networking',
       highlights: [
-        '3-day intensive program',
-        'Hands-on projects',
-        'Industry expert mentors',
-        'Certificates awarded',
+        'Introduction to EDC’s vision, mission, and yearly activities.',
+        'Inspiring talks encouraging students to explore entrepreneurship.',
+        'Interaction between new members and the EDC core team.',
+        'Conducted on 5th August 2025 at 2 PM in MPH',
       ],
     },
     {
       id: 3,
       title: 'Group Discussion',
       description:
-        'An exclusive networking event bringing together entrepreneurs, investors, and industry professionals. The evening featured keynote speakers, panel discussions, and structured networking sessions.',
+        'The Group Discussion organized by EDC JSSUNI under the National Entrepreneurship Challenge 2025 provided a platform for students to express their views on Entrepreneurship Problems on Campus. It encouraged open dialogue, critical thinking, and teamwork among participants while promoting entrepreneurial awareness within the university.',
       image:
         'https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png',
       date: '2025-09-14',
@@ -112,10 +109,10 @@ const Events = () => {
       winner: null,
       category: 'Networking',
       highlights: [
-        '95 professionals attended',
-        '5 keynote speakers',
-        '3 panel discussions',
-        '20+ business connections made',
+        'Insightful discussion on challenges faced by student entrepreneurs.',
+        'Active participation from students across different departments.',
+        'Conducted online on 14th September 2025 at 9:00 PM.',
+        'Top participants received appreciation for their valuable inputs',
       ],
     },
   ];
@@ -134,49 +131,16 @@ const Events = () => {
     <div className="min-h-screen bg-white dark:bg-black pt-16 sm:pt-20">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-6 sm:py-8 md:py-10 text-center relative">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 md:mb-8">
+        <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 md:mb-8">
           Our <span className="text-[#05B1DE] dark:text-[#05B1DE]">Events</span>
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12 px-2">
           Join us for exciting workshops, competitions, and networking events
           designed to fuel your entrepreneurial journey
         </p>
-
-        {/* Pixel Cards with Center Image */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-5 mt-8 sm:mt-10 md:mt-12">
-          <div className="flex justify-center w-full sm:w-auto">
-            <PixelCard variant="cyan" size="lg" imageSize="xl">
-              <img
-                src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080883/WhatsApp_Image_2025-09-28_at_22.00.24_4f14c6fe_sazknc.jpg"
-                alt="Event Center Image"
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
-              />
-            </PixelCard>
-          </div>
-
-          <div className="flex justify-center w-full sm:w-auto">
-            <PixelCard variant="cyan" size="lg" imageSize="xl">
-              <img
-                src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080882/WhatsApp_Image_2025-09-28_at_22.01.37_a5399f7c_w0jn1f.jpg"
-                alt="Event Center Image"
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
-              />
-            </PixelCard>
-          </div>
-
-          <div className="flex justify-center w-full sm:w-auto">
-            <PixelCard variant="cyan" size="lg" imageSize="xl">
-              <img
-                src="https://res.cloudinary.com/dh8cqlngr/image/upload/v1759080881/EDC_JSS_UNI_nviwol.png"
-                alt="Event Center Image"
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
-              />
-            </PixelCard>
-          </div>
-        </div>
       </div>
 
-      {/* Hero to Past Events Barrier */}
+      {/* Hero to Events Barrier */}
       <div className="py-6 sm:py-8 flex justify-center">
         <div className="relative group">
           {/* Main gradient line with glow effect */}
@@ -196,73 +160,71 @@ const Events = () => {
         </div>
       </div>
 
-      {/* Past Events Showcase Section */}
+      {/* Events Section */}
       <div className="py-8 sm:py-12 md:py-16 bg-black">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
-              Past{' '}
-              <span className="text-[#05B1DE] dark:text-[#05B1DE]">Events</span>
-            </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto text-sm sm:text-base px-2">
-              Relive the highlights from our most successful events and see the
-              impact we've made together
-            </p>
-          </div>
-
           {/* Past Events Grid */}
           <div className="space-y-8 sm:space-y-12 md:space-y-16">
             {pastEvents.map((event, index) => (
               <div key={event.id}>
-                <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-center">
-                  {/* Event Image */}
-                  <div className="flex-1 flex justify-center items-center w-full lg:w-auto">
-                    <div
-                      className="relative group overflow-hidden rounded-2xl shadow-2xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-none h-60 sm:h-64 md:h-72 lg:h-80 xl:h-96"
-                      style={{
-                        width: '100%',
-                        maxWidth: '400px',
-                      }}
-                    >
-                      <img
-                        src={event.image}
-                        alt={event.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="absolute bottom-4 left-4 text-white">
-                          <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">
+                <div className="flex justify-center">
+                  {/* Event Details */}
+                  <div className="w-full max-w-4xl">
+                    <div className="max-w-4xl mx-auto">
+                      {/* 1. Heading */}
+                      <div className="text-center mb-8 sm:mb-10 md:mb-12">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4">
+                          <span className="px-3 py-1 bg-[#05B1DE] text-white text-sm font-semibold rounded-full">
                             {event.category}
                           </span>
+                          <span className="text-sm text-gray-500 dark:text-gray-400">
+                            {formatDate(event.date)}
+                          </span>
                         </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  {/* Event Details */}
-                  <div className="flex-1 w-full lg:w-auto">
-                    <div className="max-w-lg mx-auto lg:mx-0">
-                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 mb-4">
-                        <span className="px-3 py-1 bg-[#05B1DE] text-white text-sm font-semibold rounded-full">
-                          {event.category}
-                        </span>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">
-                          {formatDate(event.date)}
-                        </span>
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 flex items-center justify-center gap-2 sm:gap-3">
+                          <span className="text-[#05B1DE] text-lg sm:text-xl md:text-2xl lg:text-3xl">
+                            •
+                          </span>
+                          {event.title}
+                        </h3>
                       </div>
 
-                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4">
-                        {event.title}
-                      </h3>
+                      {/* 2. Pixel Card */}
+                      <div className="flex justify-center mb-8 sm:mb-10 md:mb-12">
+                        <PixelCard variant="cyan" size="lg" imageSize="xl">
+                          <img
+                            src={event.image}
+                            alt={event.title}
+                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105 z-10"
+                          />
+                        </PixelCard>
+                      </div>
 
+                      {/* 3. Description */}
                       <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                         {event.description}
                       </p>
+
+                      {/* Infinite Moving Cards for events 1 and 2 */}
+                      {(event.id === 1 || event.id === 2) && (
+                        <div className="mb-8 sm:mb-10 md:mb-12 -mx-8 sm:-mx-12 md:-mx-16 lg:-mx-20 xl:-mx-24 2xl:-mx-32">
+                          <div className="text-center mb-4 sm:mb-6 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 2xl:px-32">
+                            <h4 className="text-lg sm:text-xl font-semibold text-white">
+                              Glimpse of the Event
+                            </h4>
+                          </div>
+                          <div className="h-[15rem] sm:h-[18rem] md:h-[20rem] w-full rounded-md flex flex-col antialiased bg-black items-center justify-center relative overflow-hidden">
+                            <InfiniteMovingCards
+                              items={
+                                event.id === 1 ? event1Gallery : event2Gallery
+                              }
+                              direction="right"
+                              speed="slow"
+                            />
+                          </div>
+                        </div>
+                      )}
 
                       {/* Event Stats */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
@@ -352,28 +314,6 @@ const Events = () => {
                         </div>
                       )}
                     </div>
-                  </div>
-                </div>
-
-                {/* Infinite Moving Cards for this event */}
-                <div className="mt-8 sm:mt-10 md:mt-12 mb-6 sm:mb-8">
-                  <div className="text-center mb-4 sm:mb-6">
-                    <h3 className="text-lg sm:text-xl font-semibold text-white">
-                      Glimpse of the Event
-                    </h3>
-                  </div>
-                  <div className="h-[15rem] sm:h-[18rem] md:h-[20rem] rounded-md flex flex-col antialiased bg-black items-center justify-center relative overflow-hidden">
-                    <InfiniteMovingCards
-                      items={
-                        index === 0
-                          ? event1Gallery
-                          : index === 1
-                            ? event2Gallery
-                            : event3Gallery
-                      }
-                      direction="right"
-                      speed="slow"
-                    />
                   </div>
                 </div>
 

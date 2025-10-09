@@ -97,14 +97,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/about"
-                  className="text-gray-600 dark:text-gray-300 hover:text-[#05B1DE] transition-all duration-300 text-base block py-2 hover:translate-x-2 group"
-                >
-                  <span className="group-hover:font-medium">About Us</span>
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/team"
                   className="text-gray-600 dark:text-gray-300 hover:text-[#05B1DE] transition-all duration-300 text-base block py-2 hover:translate-x-2 group"
                 >
@@ -116,7 +108,15 @@ const Footer = () => {
                   to="/events"
                   className="text-gray-600 dark:text-gray-300 hover:text-[#05B1DE] transition-all duration-300 text-base block py-2 hover:translate-x-2 group"
                 >
-                  <span className="group-hover:font-medium">Events</span>
+                  <span className="group-hover:font-medium">Our Events</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-gray-600 dark:text-gray-300 hover:text-[#05B1DE] transition-all duration-300 text-base block py-2 hover:translate-x-2 group"
+                >
+                  <span className="group-hover:font-medium">About Us</span>
                 </Link>
               </li>
             </ul>
